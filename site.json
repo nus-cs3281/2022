@@ -1,0 +1,26 @@
+{
+  "baseUrl": "/2022",
+  "titlePrefix": "",
+  "ignore": [
+    "_markbind/layouts/*",
+    "_markbind/logs/*",
+    "_site/*",
+    "site.json",
+    ".gitignore",
+    ".git/*",
+    "*.md",
+    "*.mbd",
+    "*.mbdf"
+  ],
+  "pages": [
+    {
+      "glob": "**/*.mbd"
+    }
+  ],"style": {
+    "bootstrapTheme": "bootswatch-pulse",
+    "codeTheme": "light"
+  },
+  "deploy": {
+    "message": "Site Update."
+  }
+}
