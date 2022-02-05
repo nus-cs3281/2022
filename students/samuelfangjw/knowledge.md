@@ -1,6 +1,6 @@
 ### Sass
 
-Sass is a stylesheet language used in TEAMMATES that compiles to CSS. It extends CSS with additional functionalities such as
+Sass is a preprocessor scripting language used in TEAMMATES that compiles to CSS. It extends CSS with additional functionalities such as
 
 1. **Variables:** Variables can be defined as follows: `$variable-name`. Once defined, they can be reused throughout the project. This can be used to help keep things consistent throughout the project. For example, we could define a color scheme to be used throughout the project.
 
