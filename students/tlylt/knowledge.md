@@ -1,7 +1,60 @@
-### Tool/Technology 1
+### Creating & Publishing a NPM package
+While I use packages from NPM all the time, working on MarkBind has motivated me to create and publish a NPM package from start to finish.
+I chose to create a plugin for Markdown-it, a Markdown parser that is used by MarkBind in the process of converting Markdown to HTML. In 
+the process of creating the plugin, I followed a tutorial by Kent C. Dodds and explored a few development tools such as 
+- mocha and chai for testing, 
+- semantic-release and commitizen for releasing the package, 
+- Babel for transpiling the code, 
+- Github Actions for automating the update.
 
-List the aspects you learned, and the resources you used to learn them, and a brief summary of each resource.
+Resources
+- [How to Write an Open Source JavaScript Library](https://egghead.io/courses/how-to-write-an-open-source-javascript-library)
 
-### Tool/Technology 2
+### Regular Expression
+Regular expressions are a powerful way to match patterns in text. In JavaScript, basic checks to find out whether a string is
+a substring can be done via the `includes` method. However, this approach may not be robust when we want to specify an exact
+match.
 
-...
+For example:
+```javascript
+const existingClass = node.attribs.class;
+if (existingClass
+    && (existingClass.includes('line-numbers') || existingClass.includes('no-line-numbers'))) {
+        return;
+    }
+// ...
+```
+in the above piece of code, the intention was to detect whether the class attribute of a HTML node contains the string 'line-numbers' or
+'no-line-numbers'. However, the use of `includes` will wrongly match 'line-numbers-1' or 'foo-line-numbers'.
+
+To match the exact pattern (for example just the word 'line-numbers'), we can use regular expressions.
+
+In total, there are 4 cases that we need to handle:
+- 'line-numbers' is at the start of the class attribute
+- 'line-numbers' is in the middle of the class attribute
+- 'line-numbers' is at the end of the class attribute
+- 'line-numbers' is the only word in the class attribute
+
+Thus to match it with regular expressions, we can use the following pattern:
+```javascript
+const existingClass = node.attribs.class || '';
+const regex = /^line-numbers\s|\sline-numbers\s|\sline-numbers$|^line-numbers$/;
+if (regex.test(existingClass)) {
+    return;
+}
+```
+This can be simplified by using the alternate operator `|`:
+```javascript
+const regex = /(^|\s)line-numbers($|\s)/;
+```
+
+To handle both 'line-numbers' and 'no-line-numbers', we can use the following pattern:
+```javascript
+const regex = /(^|\s)(no-)?line-numbers($|\s)/;
+```
+
+Lastly, in cases where we just want to know the existence of a pattern, we can use JavaScript's `test` method instead of `match` for better performance.
+
+Resources
+- [Onlilne Regex tool](https://regex101.com/)
+- [Discussions around the examples above in MarkBind #1734 PR review](https://github.com/MarkBind/markbind/pull/1734)
