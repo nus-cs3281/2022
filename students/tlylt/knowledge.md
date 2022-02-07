@@ -29,7 +29,7 @@ in the above piece of code, the intention was to detect whether the class attrib
 
 To match the exact pattern (for example just the word 'line-numbers'), we can use regular expressions.
 
-In total, there are 3 cases that we need to handle:
+In total, there are 4 cases that we need to handle:
 - 'line-numbers' is at the start of the class attribute
 - 'line-numbers' is in the middle of the class attribute
 - 'line-numbers' is at the end of the class attribute
@@ -43,7 +43,7 @@ if (regex.test(existingClass)) {
     return;
 }
 ```
-This can be simplified with by using the alternate operator `|`:
+This can be simplified by using the alternate operator `|`:
 ```javascript
 const regex = /(^|\s)line-numbers($|\s)/;
 ```
