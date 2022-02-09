@@ -58,3 +58,12 @@ Lastly, in cases where we just want to know the existence of a pattern, we can u
 Resources
 - [Onlilne Regex tool](https://regex101.com/)
 - [Discussions around the examples above in MarkBind #1734 PR review](https://github.com/MarkBind/markbind/pull/1734)
+
+### Devops & CI
+#### npm i vs npm ci
+The two commands are both used to install dependencies from the npm registry. However, to keep the installation process relabilable,
+npm ci (stands for npm clean install) can be used in CI environments to ensure a fresh installation.
+
+- [npm i](https://docs.npmjs.com/cli/v8/commands/npm-install)
+- [npm ci](https://docs.npmjs.com/cli/v8/commands/npm-ci)
+- [stackoverflow post](https://stackoverflow.com/questions/52499617/what-is-the-difference-between-npm-install-and-npm-ci)
