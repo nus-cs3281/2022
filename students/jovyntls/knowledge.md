@@ -31,3 +31,23 @@ This was something that I was previously not aware of so it was interesting to s
 Resources
 * [Using data attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 
+### Server-Side Rendering
+
+Some things that helped me solve SSR/hydration issues this week:
+* Conditionally render data when it has been fully loaded
+* Take note of the different lifecycle hooks (`mounted` only runs on the client)
+  * Vue's docs for lifecycle hooks (linked above) were once again a good resource
+* Take note of how the Vue component will be compiled, ensure that the HTML is correct and aligns on both client- and server- side
+
+Resources
+* [Data reactivity on the server](https://ssr.vuejs.org/guide/universal.html#data-reactivity-on-the-server)
+  * Data reactivity is unnecessary on the server, and is disabled by default.
+  * `mount` and `beforeMount` will only be executed on the client
+* [Client-side Hydration](https://ssr.vuejs.org/guide/hydration.html)
+  * Instead of throwing away the markup that the server has already rendered and re-creating all the DOM elements, we “hydrate” the static mark-up and make it interactive
+  * In development mode, Vue  will assert that the client-side generated virtual DOM tree matches the DOM structure rendered from the server
+    * If mismatch: bail hydration, discard existing DOM, render from scratch
+    * This is disabled in production for performance reasons
+* [What to do when Vue hydration fails | blog.Lichter.io](https://blog.lichter.io/posts/vue-hydration-error/)
+  * This resource was very helpful in debugging the source of hydration errors: [Solving the hydration failure](https://blog.lichter.io/posts/vue-hydration-error/#solving-the-hydration-failure) 
+
