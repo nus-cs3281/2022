@@ -29,7 +29,7 @@ in the above piece of code, the intention was to detect whether the class attrib
 
 To match the exact pattern (for example just the word 'line-numbers'), we can use regular expressions.
 
-In total, there are 3 cases that we need to handle:
+In total, there are 4 cases that we need to handle:
 - 'line-numbers' is at the start of the class attribute
 - 'line-numbers' is in the middle of the class attribute
 - 'line-numbers' is at the end of the class attribute
@@ -43,7 +43,7 @@ if (regex.test(existingClass)) {
     return;
 }
 ```
-This can be simplified with by using the alternate operator `|`:
+This can be simplified by using the alternate operator `|`:
 ```javascript
 const regex = /(^|\s)line-numbers($|\s)/;
 ```
@@ -58,3 +58,12 @@ Lastly, in cases where we just want to know the existence of a pattern, we can u
 Resources
 - [Onlilne Regex tool](https://regex101.com/)
 - [Discussions around the examples above in MarkBind #1734 PR review](https://github.com/MarkBind/markbind/pull/1734)
+
+### Devops & CI
+#### npm i vs npm ci
+The two commands are both used to install dependencies from the npm registry. However, to keep the installation process relabilable,
+npm ci (stands for npm clean install) can be used in CI environments to ensure a fresh installation.
+
+- [npm i](https://docs.npmjs.com/cli/v8/commands/npm-install)
+- [npm ci](https://docs.npmjs.com/cli/v8/commands/npm-ci)
+- [stackoverflow post](https://stackoverflow.com/questions/52499617/what-is-the-difference-between-npm-install-and-npm-ci)
