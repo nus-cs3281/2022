@@ -7,3 +7,5 @@
 | 5 | Merged PR: [Add wildcard type parameter #1642](https://github.com/reposense/RepoSense/pull/1642) |
 | 5 | Merged PR: [Fix console error when doing individual merge group #1618](https://github.com/reposense/RepoSense/pull/1618) |
 | 5 | Submitted Issue: [Enhance Checkstyle](https://github.com/reposense/RepoSense/issues/1651) |
+| 5 | Reviewed PR: [Remove unused GitLsTree class and methods #1653](https://github.com/reposense/RepoSense/pull/1653) |
+| 5 | Submitted Issue: [Upgrade Gradle to at least 7.3](https://github.com/reposense/RepoSense/issues/1661) |
