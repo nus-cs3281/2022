@@ -1,4 +1,4 @@
-### Google Cloud Billing Mechanism
+### GCP: Billing Mechanism
 
 I did a research on how Google Cloud's services are being billed, especially on the mechanism for
 Datastore and App Engine. This gives me better way to appreciate the importance of achieving balance
@@ -8,7 +8,7 @@ Documents Referred:
 * https://cloud.google.com/appengine/pricing
 * https://cloud.google.com/datastore/pricing
 
-### Google Cloud Datastore Indexing
+### GCP: Datastore Indexing
 
 I learned how Datastore works and the importance of indexing. As by default only ascending order
 is indexed by Datastore, more compilcated queries involving sorting and ranging needs a custom index
@@ -18,7 +18,7 @@ Documents Referred:
 * https://cloud.google.com/datastore/docs/concepts/indexes
 * https://cloud.google.com/appengine/docs/standard/java/datastore/indexes
 
-### Datastore, Objectify and Google Cloud GUI
+### GCP: Datastore, Objectify and Google Cloud GUI
 
 Knowledge on how to manipulate datastore entities are gained along the way of working on onboarding
 tasks. This includes the use of Objectify API and the DatastoreClient framework.
@@ -28,7 +28,7 @@ Documents Referred:
 * https://github.com/GabiAxel/google-cloud-gui
 * Codes in the teammates repo itself
 
-### Angular's Life-Cycle Hooks, Directives, View/ContentChild and ElementRef
+### Angular: Life-Cycle Hooks, View/ContentChild and ElementRef
 
 Researches on these core APIs were done when I attempt to add event listeners for mouse scroll events.
 
@@ -38,3 +38,24 @@ Documents Referred:
 * https://angular.io/api/core/ViewChild
 * https://angular.io/api/core/ContentChild
 * https://angular.io/api/core/ElementRef
+
+### Angular: Attribute Directive and HostListener
+
+This seems to be a more convenient way to change the behaviour of a component. It is also very convenient for
+code reuse. Directive can be declared once and easily imported to any other modules. It is more flexible than
+the ElementRef solution to add event listener.
+
+Document Referred:
+* https://angular.io/guide/attribute-directives
+* https://angular.io/api/core/HostListener
+
+### RxJS: Observable, Pipe, Finalize()
+
+Observable is runned asynchronously and if there is the other async function running within an observable (such
+as the other observable's subscription or setInterval()), the running sequence is not guaranteed. Therefore, the
+outside finalize() can actually run before codes inside finish execution.
+
+Document Referred:
+* https://rxjs.dev/api/operators/finalize
+* https://rxjs.dev/guide/operators
+* https://rxjs.dev/guide/observable
