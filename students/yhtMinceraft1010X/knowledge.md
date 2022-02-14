@@ -21,3 +21,16 @@ Below is a table comparing some Java 8 date/time APIs that I worked with in [PR 
 Additional Resources:
 * https://www.baeldung.com/java-8-date-time-intro
 * https://www.baeldung.com/migrating-to-java-8-date-time-api
+
+### Toolstack upgrades over many versions
+
+Sometimes, the toolstack used in a project may be very out-of-date, requiring a jump over many versions to reach the latest version. Here are some tips for upgrading the toolstack:
+* Start a separate branch for your upgrades.
+* Check the current versions of the tools that your project is currently using.
+* Also take note of any requirements from your current toolstack/project that need to be preserved.
+* Check through the release notes for all versions from the current version to the target version that you intend to upgrade to.
+  * Although it is ideal to upgrade to the latest version, it may be unrealistic to jump straight there, given that major compatibility-breaking changes can accumulate.
+  * Instead, aim for an intermediate version to gradually resolve issues with backward compatibility.
+  * While searching through the release notes, take note of any deprecations and compatibility-breaking changes.
+  * Take note of any third-party dependencies. Some of them may not have been upgraded alongside the main tools.
+* After upgrading the relevant tools, check that the toolstack/project requirements are preserved.
