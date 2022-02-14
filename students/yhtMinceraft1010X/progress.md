@@ -9,3 +9,4 @@
 | 5 | Submitted Issue: [Enhance Checkstyle](https://github.com/reposense/RepoSense/issues/1651) |
 | 5 | Reviewed PR: [Remove unused GitLsTree class and methods #1653](https://github.com/reposense/RepoSense/pull/1653) |
 | 5 | Submitted Issue: [Upgrade Gradle to at least 7.3](https://github.com/reposense/RepoSense/issues/1661) |
+| 6 | Submitted Issue: [Concurrency Overhaul for RepoSense](https://github.com/reposense/RepoSense/issues/1669) |
