@@ -1,4 +1,4 @@
-### Creating & Publishing a NPM package
+<panel header="### Creating & Publishing a NPM package" type="seamless" peek>
 While I use packages from NPM all the time, working on MarkBind has motivated me to create and publish a NPM package from start to finish.
 I chose to create a plugin for Markdown-it, a Markdown parser that is used by MarkBind in the process of converting Markdown to HTML. In 
 the process of creating the plugin, I followed a tutorial by Kent C. Dodds and explored a few development tools such as 
@@ -9,8 +9,9 @@ the process of creating the plugin, I followed a tutorial by Kent C. Dodds and e
 
 Resources
 - [How to Write an Open Source JavaScript Library](https://egghead.io/courses/how-to-write-an-open-source-javascript-library)
+</panel>
 
-### Regular Expression
+<panel header="### Regular Expression" type="seamless" peek>
 Regular expressions are a powerful way to match patterns in text. In JavaScript, basic checks to find out whether a string is
 a substring can be done via the `includes` method. However, this approach may not be robust when we want to specify an exact
 match.
@@ -58,8 +59,9 @@ Lastly, in cases where we just want to know the existence of a pattern, we can u
 Resources
 - [Onlilne Regex tool](https://regex101.com/)
 - [Discussions around the examples above in MarkBind #1734 PR review](https://github.com/MarkBind/markbind/pull/1734)
+</panel>
 
-### Devops & CI
+<panel header="### Devops & CI" type="seamless" peek>
 #### npm i vs npm ci
 The two commands are both used to install dependencies from the npm registry. However, to keep the installation process relabilable,
 npm ci (stands for npm clean install) can be used in CI environments to ensure a fresh installation.
@@ -67,3 +69,39 @@ npm ci (stands for npm clean install) can be used in CI environments to ensure a
 - [npm i](https://docs.npmjs.com/cli/v8/commands/npm-install)
 - [npm ci](https://docs.npmjs.com/cli/v8/commands/npm-ci)
 - [stackoverflow post](https://stackoverflow.com/questions/52499617/what-is-the-difference-between-npm-install-and-npm-ci)
+
+#### GitHub Workflow
+I have summarized what I learned from configuring the CI script in this [article](https://dev.to/tlylt/intermediate-github-ci-workflow-walk-through-1j6p).
+The interesting parts are:
+- How to run tests on various OSes
+- How to run jobs dependent on one another and on certain conditions
+- How to run steps based on certain conditions
+
+#### Semantic versioning
+Git tags
+- Lightweight tag just points to a commit
+	- `git tag <tagName> [commit]`
+	- `git show <tagName>`
+- Annotated tags
+	- Full object in git database
+	- `git tag -a <tagName> -m"<annotation>" [commit]`
+
+Semantic versioning
+- Major version
+    - `1.0.0`
+- Minor version
+    - `1.1.0`
+- Patch version
+    - `1.1.1`
+
+Annotated tags + semantic versioning = Semantic Releases
+
+Typical steps for a release:
+1. Create a annotated tag
+2. Push tag to remote repository
+3. Deployment
+4. Release Notes
+
+- [Semantic Version](https://semver.org/)
+- [Manage releases with Semantic Versioning and Git Tags](https://www.youtube.com/watch?v=4wPjo5C-v8Y)
+</panel>
