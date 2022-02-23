@@ -1,3 +1,19 @@
+## IntelliJ Tools
+### Inspect Code
+the Inspect Code tool allows IntelliJ to look for common code quality issues such as 
+- Declaration redundancy
+- Probable bugs
+- Proofreading
+
+Limitations:
+- A full run of the code cleanup takes a long time to complete. A run on RepoSense itself takes ~10 minutes.
+This can be cut significantly shorter if we ignore the proofreading checks which cuts it down to 30 seconds.
+- 'Unused' (as declared by IntelliJ) fields might not be redundant such as in [`SummaryJson.java`](https://github.com/reposense/RepoSense/blob/master/src/main/java/reposense/report/SummaryJson.java) where the fields are necessary for conversion to a JSON file.
+- 'Unused' methods are sometimes necessary for other tools such as JavaBeans (requires setters and getters) and JavaFX (@FXML methods are not detected as 'used')
+
+Thus, we should still exercise discretion in using this tool even if it is something as simple as removing unused variables or methods.
+
+## FileSystems
 ### Specifying File Paths in Command Line Arguments 
 General:
 - File path arguments should nearly always be wrapped in quotation marks to accommodate file paths containing spaces. 
@@ -36,13 +52,28 @@ user's home directory.
     - For `'`, replace it with `'"'"'`. Consecutive quoted strings not separated by spaces are treated as a single argument in Bash. This quotes the single quote in double quotes where it does not have special meaning.
 - A (possibly incomplete) list of special characters in Bash that need to be escaped can be found in this [stackexchange post](https://unix.stackexchange.com/questions/347332/what-characters-need-to-be-escaped-in-files-without-quotes).
 - _Relevant note_: On Windows CMD, the `'` single quote has no special meaning and cannot be used to quote arguments in CMD. Only double quotes works for arguments containing spaces to be treated as a single argument.
-
-### "file" URI Scheme
-- Specification can be found here [RFC8089](https://datatracker.ietf.org/doc/html/rfc8089).
-  - A file URL looks like `file://host.example.com/path/to/file`.
-    - Double slashes following the colon `://` indicates that the file is not local and `host.example.com` is the 'authority' which hosts the file
-    - Single slash or triple slashes after the colon `:/` or `:///` will both be treated as a local file. Everything after the last slash forms the path to the file.
  
+## GitHub
+### Deployments and Environments
+- [Environments](https://docs.github.com/en/rest/reference/deployments#environments) can be viewed as the platform for which deployments are staged. There are generally fewer of them. For example in RepoSense, there is roughly two environments per active pull request for deployments.
+  - Environments can be viewed on the main page of a repository. 
+  - They will linger so long as the deployment on the environment continues to exist and would normally require manual deletion.
+- [Deployments](https://docs.github.com/en/rest/reference/deployments) are requests to deploy a specific version of the repo such as a pending pull request. In the context of RepoSense, a single PR can have several tens of deployments if it is consistently updated.
+  - It is generally difficult to track and control deployments on the GitHub page itself.
+  - However, through the GitHub API, we can query all deployments relating to an environment and deleting them. This will automatically remove the environment from the listing as well. This solution was taken from this [stackoverflow post](https://stackoverflow.com/a/61272173).
+
+### GitHub API
+The GitHub API provides us with a way to interact with repositories via a RESTful API. Using `curl` commands:
+- We are able to query (via GET) for information such as branches, deployments and environments
+- We are also able to POST commands to a repository to perform various actions such as deleting deployments. These generally require a security token which might not be available from a personal computer's CLI. When running GitHub Actions, it is possible to acquire one for the repository to perform actions such as closing deployments.
+
+### GitHub Actions
+We must add GitHub action workflow files to the directory `.github/workflows` in order to automatically perform certain scripts on certain GitHub actions.
+- The general workflow of a `.yml` workflow file contains a declaration `on` which states under what scenarios will these actions be triggered
+  - It is followed by a list of jobs. For each job, we can declare a name, platform to run on, environment variables, followed by sequential steps to perform.
+  - Under steps, we can use `run` to run shell scripts similar to running the same command from a BASH terminal 
+
+## Git Specifications:
 ### Git Diff Output
 The `git diff` command is used heavily by RepoSense for analyzing. The following are behaviour in the output that I learnt:
 - The filename `/dev/null` represents a non-existent file. A mapping from `/dev/null` to a file indicates a new file.
@@ -59,3 +90,23 @@ Every commit in the log output displays the hash, author with email, date and me
 - If a user has set an email in their `git config` but set their Github 'keep my email address private' setting to true, web-based Git operations will list their email as `username@users.noreply.github.com`.
 - However, it is possible to explicitly set the email to be empty through `git config --global user.email \<\>` which will set it to `<>`. u 
 
+### Git Commit & Config Interaction
+`git commit` commit information details can be found [here](https://git-scm.com/docs/git-commit#_commit_information).
+- When committing with a `user.name` and `user.email` that matches a GitHub account, commits on GitHub will be able to link the GitHub account to the commit.
+  - However, committing with an empty email `<>` will cause the commit to look like [this on GitHub](https://github.com/reposense/testrepo-Alpha/commit/2536b8e0de3366989f4b124b9a5a613db010379e) where there is no account linked to it.
+- It is possible temporarily set `user.name` as `<>`. However, it will not allow the user to commit, citing an invalid username.
+  - It is also possible to set `user.name` as an empty string which is equivalent to resetting it. Git will not allow commits until a `user.name` has been set.
+
+## Others
+### "file" URI Scheme
+- Specification can be found here [RFC8089](https://datatracker.ietf.org/doc/html/rfc8089).
+  - A file URL looks like `file://host.example.com/path/to/file`.
+    - Double slashes following the colon `://` indicates that the file is not local and `host.example.com` is the 'authority' which hosts the file
+    - Single slash or triple slashes after the colon `:/` or `:///` will both be treated as a local file. Everything after the last slash forms the path to the file.
+
+### cURL command
+cURL is a command-line tool to transfer data to or from a server using support protocols. In particular, GitHub Actions shows many examples of RESTful API calls using the `curl` command.
+
+### RESTful API
+- REST stands for _Representational state transfer_. It is an architectural style for an API that uses HTTP requests to access and use data. (description taken from [here](https://www.techtarget.com/searchapparchitecture/definition/RESTful-API)). 
+- GitHub has its own RESTful API where we can make queries to repositories and possibly post commands to a repo provided we have proper access rights. The return type for queries is normally in the JSON format.
