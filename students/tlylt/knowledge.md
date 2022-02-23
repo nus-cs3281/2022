@@ -62,6 +62,7 @@ Resources
 </panel>
 
 <panel header="### Devops & CI" type="seamless" peek>
+
 #### npm i vs npm ci
 The two commands are both used to install dependencies from the npm registry. However, to keep the installation process relabilable,
 npm ci (stands for npm clean install) can be used in CI environments to ensure a fresh installation.
