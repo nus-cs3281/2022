@@ -24,3 +24,4 @@
 | 7 | Authored PR (ongoing): [Selective Deadline Extensions - DeadlineExtension entity and sending of emails #11602](https://github.com/TEAMMATES/teammates/pull/11602)
 | 7 | Reviewed PR: [Infinite loading upon clearing text in a date picker #11562](https://github.com/TEAMMATES/teammates/pull/11562)
 | 7 | Reviewed PR: [Outdated link in Solr documentation #11601](https://github.com/TEAMMATES/teammates/pull/11601)
+| 7 | Reviewed PR: [Fix incorrect loading for student result page #11604](https://github.com/TEAMMATES/teammates/pull/11604)
