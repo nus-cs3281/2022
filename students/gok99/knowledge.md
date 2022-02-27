@@ -20,20 +20,39 @@ References:
  
 Like Gradle, Github Actions help with automation of workflows like CI/CD and project management, and can be triggered by a variety of events (pull requests, issues, releases, forks, etc). It also has a growing library of plugins that make workflows a lot easier to set-up. I was surprised that there is some nice tooling support for GitHub actions on IntelliJ.
  
-GitHub also provides a variety of API to interact with these objects. One quirk I came across with the API was that posting single comments on pull requests need to go through the issues endpoint instead of the pulls endpoint (the endpoint for pulls requires code to be referenced). This doesn't cause issues since issues have pulls will never have identical IDs.
+GitHub also provides a variety of API to interact with these objects. One quirk I came across with the API was that posting single comments on pull requests need to go through the issues endpoint instead of the pulls endpoint (the endpoint for pulls requires code to be referenced). This doesn't cause problems since issues and pulls will never have identical IDs.
  
 Actions and APIs also have some great documentation:
 * https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api
 * https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions
 * https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
- 
+
+### Git Remotes
+
+Git exploded in popularity in large part due to Git hosting providers like GitHub. GitLab and Bitbucket are also commonly used Git hosts. RepoSense has thus far only largely supported GitHub, but there is a clear incentive to support other commonly used remotes. This is made a little challenging due to differences in conventions between the sites:
+
+| |`base_url`|Commit View|Blame View|
+|:-:|:-:|:-:|:-:|
+|GitHub|github.com|`{base_url}/{org}/{repo_name}/commit/{commit_hash}`|`{base_url}/{org}/{repo_name}/blame/{branch}/{file_path}`|
+|GitLab|gitlab.com|`{base_url}/{org}/{repo_name}/-/commit/{commit_hash}`|`{base_url}/{org}/{repo_name}/-/blame/{branch}/{file_path}`|
+|Bitbucket|bitbucket.org|`{base_url}/{org}/{repo_name}/commits/{commit_hash}`|`{base_url}/{org}/{repo_name}/annotate/{branch}/{file_path}`|
+
+For example, Bitbucket uses the term 'annotate' instead of 'blame' because the word 'blame' is insufficiently postive.
+
+### Cypress Tests
+
+Cypress is a frontend testing tool for testing applications that run in the browser, with tests that are easy to read and write. It uses browser automation (similar to Selenium) and comes with a browser and relevant dependencies out of the box, so it's very easy to set-up. Cypress also provides a dashboard for convenient monitoring of test runs. 
+
+https://docs.cypress.io/guides/overview/why-cypress#In-a-nutshell
+
 ### Bash Scripting
  
-Bash scripts can be run in a github action workflow, which greatly expands the scope of things you can do with actions. Bash is quite expressive (I hadn't realized just how much it could do). some cool things I realized you could do:
+Bash scripts can be run in a github action workflow, which greatly expands the scope of things you can do with actions. Bash is quite expressive (I hadn't realized just how much it could do). some cool things I learned you could do:
  
 * {$VAR,,} to lowercase string in $VAR.
 * `$*` gives parameter values separated by the value in `IFS` (Internal File Separator).
 * Pipe output into `python3` with a `-c` flag and perform more complex processing with a single line python program.
+* Standard output and error can be redirected separately (e.g. `ls 1> out 2> err`)
  
 ### JavaScript Quirks
  
