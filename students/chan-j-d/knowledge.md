@@ -110,3 +110,10 @@ cURL is a command-line tool to transfer data to or from a server using support p
 ### RESTful API
 - REST stands for _Representational state transfer_. It is an architectural style for an API that uses HTTP requests to access and use data. (description taken from [here](https://www.techtarget.com/searchapparchitecture/definition/RESTful-API)). 
 - GitHub has its own RESTful API where we can make queries to repositories and possibly post commands to a repo provided we have proper access rights. The return type for queries is normally in the JSON format.
+
+### Bash Shell Scripting
+- Can use `.sh` files to write shell scripts that can be run in Linux environments
+- Can specify functions as `function_name() { ... }`
+  - Functional arguments can be referenced from within the function declaration block with `${1}` referring to the first argument, `${2}` referring to the second argument, etc.
+  - These functional arguments can be specified by a user via `function_name "$argument1" "$argument2"`
+  - `$@` can also be used to refer to all of the shell script's CLI arguments. It can be iterated through like an array.
