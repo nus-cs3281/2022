@@ -106,3 +106,43 @@ Typical steps for a release:
 - [Semantic Version](https://semver.org/)
 - [Manage releases with Semantic Versioning and Git Tags](https://www.youtube.com/watch?v=4wPjo5C-v8Y)
 </panel>
+
+<panel header="### Git & GitHub" type="seamless" peek>
+
+#### Git
+##### Context
+In a feature branch, I updated the .gitignore to ignore some generated build files. When I wanted to switch over to the master branch and start work on another feature, the build files showed up because the master branch's .gitignore has not been updated yet. I was unsure how to create a new branch from master and work on a new feature, without the build files showing up as unstaged changes. The branch that contains the build files cannot be merged yet because the feature is still undergoing review.
+
+This prompted me to post my first [stackoverflow question](https://stackoverflow.com/questions/71316258/how-to-deal-with-files-ignored-in-a-feature-branch-but-showed-up-when-switched-t):
+> How to deal with files ignored in a feature branch but showed up when switched to the master branch?
+
+Thanks to the developer community, I was able to get the following solution that I can use.
+> just repeat the same changes to the .gitignore file on another branch, but leave it as a pending change and don't commit it
+
+</panel>
+
+<panel header="### HTML" type="seamless" peek>
+
+#### HTML
+Deprecation, in a technical sense, is the discouragement from using an old feature.
+In HTML, there are many elements that get deprecated over time to improve the language. The main reason behind it is a separation of concerns.
+The introduction of external stylesheets (CSS) means HTML has evolved to focus on content, and not on style.
+
+Some reasons for deprecation of certain elements that I gathered from the reference article are:
+- Avoiding duplication
+- Ease of management
+- Readability
+- Caching
+- Developer specialization
+- User options
+- Responsiveness and device independence
+
+In fact, some of the above reasons might also be applicable to other long-lasting software projects.
+One interesting thing about decrecation is that it is definitely not easy to ask people to make changes.
+Sometimes it takes forever for developers to migrate their code over, perhaps because of the mantra that "if it works, it works".
+Even when deciding on what features to decrecate, it could be a difficult argument to make. One unexpected thing that I discovered about HTML element deprecation is that althought the `<big>` tag is now deprecated, the `<small>` tag is not. When the use of a feature is so widespread, it is possible to
+derive semantic meaning to save it from deprecation.
+
+- [Why <big> is not in HTML 5 Tag list while <small> is?](https://stackoverflow.com/questions/2260024/why-big-is-not-in-html-5-tag-list-while-small-is)
+- [Why Do Some HTML Elements Become Deprecated?](https://css-tricks.com/why-do-some-html-elements-become-deprecated/)
+</panel>
