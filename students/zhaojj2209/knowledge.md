@@ -19,10 +19,24 @@ The TEAMMATES frontend uses Jasmine for component testing. Its features include:
 Resources:
 - [Jasmine Tutorial](https://jasmine.github.io/tutorials/your_first_suite)
 
+### Selenium
+
+TEAMMATES uses Selenium, which is a set of tools that enable the automation of web browsers, for end-to-end (E2E) testing. Its features include:
+- Opening and navigating a web browser using `WebDriver`
+- Finding web elements by id, class name, etc
+- Clicking elements such as buttons
+- Retrieving element attributes
+
+By using the above features, the testing of various user flows from start to finish is automated, so as to ensure that the application is working as intended for all of the application's use cases.
+
+Resources:
+- [Selenium tutorial](https://www.selenium.dev/documentation/webdriver/getting_started/first_script/)
+
 ### Google Cloud Datastore
 
 TEAMMATES uses the Google Cloud Datastore as its database. Though it is fast and highly scalable, it comes with its limitations:
 - All properties used in queries have to be indexed. Though this speeds up the query process, it uses up storage space and therefore may lead to higher costs.
+- A query can only contain inequality filters on at most one property, so as to avoid scanning the entire index. To query for entities using inequality filters on multiple attributes, we need to make multiple queries and combine their results.
 - Pricing is based on entity reads and writes, hence improper management of the database can lead to high costs. There are ways to reduce such costs, such as using key-only queries.
 
 Resources:
