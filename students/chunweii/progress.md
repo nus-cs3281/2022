@@ -8,8 +8,8 @@
 | 3 | Merged PR [#869 Apply prettier on all ts/json/html files](https://github.com/CATcher-org/CATcher/pull/869) |
 | 4 | Opened issue [#873 Improve user experience of choosing a duplicate issue in Team Response phase](https://github.com/CATcher-org/CATcher/issues/873) |
 | 4 | Merged PR [#874 Extract session-selection from auth component](https://github.com/CATcher-org/CATcher/pull/874) |
-| 5 | Authored PR [#878 Add better logging](https://github.com/CATcher-org/CATcher/pull/878) |
+| 5 | Merged PR [#878 Add better logging](https://github.com/CATcher-org/CATcher/pull/878) |
 | 6 | Reviewed PR [#881 Fix #880 Clicking on open issue in new tab gives error](https://github.com/CATcher-org/CATcher/pull/881) |
 | 6 | Reviewed PR [#891 Refactor colour constants in LabelService and CSS constants in LabelConstants](https://github.com/CATcher-org/CATcher/pull/891) |
-| 7 | Created PR (in progress) [#894 Improve user experience of choosing a duplicate issue in Team Response phase](https://github.com/CATcher-org/CATcher/pull/894) |
-| 7 | Created PR [#899 Create issue templates](https://github.com/CATcher-org/CATcher/pull/899) |
+| 7 | Authored PR (in progress) [#894 Improve user experience of choosing a duplicate issue in Team Response phase](https://github.com/CATcher-org/CATcher/pull/894) |
+| 7 | Authored PR [#899 Create issue templates](https://github.com/CATcher-org/CATcher/pull/899) |
