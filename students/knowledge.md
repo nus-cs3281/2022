@@ -1,7 +1,7 @@
 <frontmatter>
 pageNav: 2
 </frontmatter>
-{% from "index.mbd" import projects %}
+{% from "index.md" import projects %}
 
 # Knowledge gained from Projects
 

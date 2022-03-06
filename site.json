@@ -8,13 +8,11 @@
     "site.json",
     ".gitignore",
     ".git/*",
-    "*.md",
-    "*.mbd",
-    "*.mbdf"
+    "*.md"
   ],
   "pages": [
     {
-      "glob": "**/*.mbd"
+      "glob": "**/*.md"
     }
   ],"style": {
     "bootstrapTheme": "bootswatch-pulse",

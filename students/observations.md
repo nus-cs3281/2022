@@ -1,7 +1,7 @@
 <frontmatter>
 pageNav: 2
 </frontmatter>
-{% from "cs3282-index.mbd" import projects %}
+{% from "cs3282-index.md" import projects %}
 
 # Observations from External Projects
 
