@@ -14,3 +14,5 @@
 | 6      | Reviewed PR: [Remove unused variables in Java files #1673](https://github.com/reposense/RepoSense/pull/1673) |
 | 6      | Merged PR: [Add wildcard parameterized type #121](https://github.com/se-edu/addressbook-level3/pull/121) |
 | Recess | Merged PR: [Convert datetime functionalities to java.time package #1625](https://github.com/reposense/RepoSense/pull/1625) |
+| 7      | Reviewed PR: [Separate backend and frontend responsibilites #1691](https://github.com/reposense/RepoSense/pull/1691) |
+| 7      | Merged PR:[Docs: fix table format in configFiles.md #1666](https://github.com/reposense/RepoSense/pull/1666) |
