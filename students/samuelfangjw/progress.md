@@ -16,7 +16,6 @@
 | 6 | Authored PR (merged): [Make account requests searchable in admin search page #11560](https://github.com/TEAMMATES/teammates/pull/11560) |
 | R | Submitted Issue: [Add AccountRequest entity to storage component diagram #11583](https://github.com/TEAMMATES/teammates/issues/11583) |
 | R | Authored PR (merged): [Add account request entity to storage component diagram #11584](https://github.com/TEAMMATES/teammates/pull/11584) |
-| R | Authored PR (awaiting review): [Admin: Give a way to remove unregistered instructors and their data #11582](https://github.com/TEAMMATES/teammates/pull/11582) |
 | R | Reviewed PR: [Infinite loading upon clearing text in a date picker #11562](https://github.com/TEAMMATES/teammates/pull/11562) |
 | R | Reviewed PR: [Outdated link in Solr documentation #11601](https://github.com/TEAMMATES/teammates/pull/11601) |
 | 7 | Submitted Issue: [E2E Tests (Firefox) Failing Consistently #11591](https://github.com/TEAMMATES/teammates/issues/11591) |
@@ -25,10 +24,11 @@
 | 7 | Responded to contributor queries: [Can not search for students in instructor search page (difficulties using Apache Solr) #11594](https://github.com/TEAMMATES/teammates/issues/11594#issuecomment-1050635825) |
 | 7 | Responded to contrubutor queries: [Team contribution question: anomaly in responses shown in the results page #11615](https://github.com/TEAMMATES/teammates/issues/11615#issuecomment-1056505377) |
 | 7 | Authored PR (merged): [Use Firefox 96 in E2E tests #11611](https://github.com/TEAMMATES/teammates/pull/11611) |
-| 7 | Authored PR (ongoing): [Selective Deadline Extensions - DeadlineExtension entity and sending of emails #11602](https://github.com/TEAMMATES/teammates/pull/11602) |
 | 7 | Reviewed PR: [Fix incorrect loading for student result page #11604](https://github.com/TEAMMATES/teammates/pull/11604) |
 | 7 | Reviewed PR: [Instructor create session: default questions: replace 'contribution question' #11613](https://github.com/TEAMMATES/teammates/pull/11613) |
 | 8 | Submitted Issue: [Remove overridden text-break class #11633](https://github.com/TEAMMATES/teammates/issues/11633) |
 | 8 | Authored PR (awaiting review): [Remove overridden text-break class #11634](https://github.com/TEAMMATES/teammates/pull/11634) |
+| 8 | Authored PR (merged): [Admin: Give a way to remove unregistered instructors and their data #11582](https://github.com/TEAMMATES/teammates/pull/11582) |
 | 8 | Reviewed PR: [New instructors: set the session timestamps of the sample course to match user #11627](https://github.com/TEAMMATES/teammates/pull/11627) |
 | 8 | Reviewed PR: [Selective Deadline Extensions - Get selective deadlines #11606](https://github.com/TEAMMATES/teammates/pull/11606) |
+| 9 | Authored PR (ongoing): [Selective Deadline Extensions - DeadlineExtension entity and sending of emails #11602](https://github.com/TEAMMATES/teammates/pull/11602) |
