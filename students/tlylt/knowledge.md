@@ -72,11 +72,35 @@ npm ci (stands for npm clean install) can be used in CI environments to ensure a
 - [stackoverflow post](https://stackoverflow.com/questions/52499617/what-is-the-difference-between-npm-install-and-npm-ci)
 
 #### GitHub Workflow
+
+##### Matrix, jobs & conditional Steps
 I have summarized what I learned from configuring the CI script in this [article](https://dev.to/tlylt/intermediate-github-ci-workflow-walk-through-1j6p).
 The interesting parts are:
 - How to run tests on various OSes
 - How to run jobs dependent on one another and on certain conditions
 - How to run steps based on certain conditions
+
+##### PR from forked repositories
+While working on creating a PR preivew workflow for MarkBind, I found out that secrets are not available when workflows are being triggered from a fork. This limitation is due to security concerns that malicious users may access the secrets by modifying the original workflow. 
+
+To still allow certain legitimate use cases, GitHub came up with a separate event called "PULL_REQUEST_TARGET" that can be used to trigger a workflow from a fork, with access to the secrets. This is with the restriction that the workflow will only run based on the content of the base branch of the parent repository. With this approach, the code from a fork will not be executed and hence it is relatively safe to run. However, I found an interesting [article](https://blog.teddykatz.com/2021/03/17/github-actions-write-access.html) that in fact reported (has been fixed) a way to misbehave and exploit this approach. GitHub Security Lab also published a relevant [article](https://securitylab.github.com/research/github-actions-preventing-pwn-requests/) with regards to working with workflows and forked repositories.
+
+A short summary of the recommended approach is:
+- create two separate workflows
+- one workflow triggers when PR is sent from any repo. It builds using content from the forked repo and upload the relevant files as artifacts. This workflow should not invovle any secrets.
+- another workflow triggers when the above workflow has completed. This workflow should download the artifacts and does the work with possible access to secrets.
+
+- [Stealing arbitrary GitHub Actions secrets](https://blog.teddykatz.com/2021/03/17/github-actions-write-access.html)
+- [Keeping your GitHub Actions and workflows secure Part 1: Preventing pwn requests](https://securitylab.github.com/research/github-actions-preventing-pwn-requests/)
+- [GitHub Actions improvements for fork and pull request workflows](https://github.blog/2020-08-03-github-actions-improvements-for-fork-and-pull-request-workflows/#improvements-for-public-repository-forks)
+
+##### Reusable workflows
+To improve the utility of workflows, GitHub introduced [reusable workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows). A reusable workflow is a workflow that can be used to trigger other workflows.
+
+#### PR Preview
+PR Preview is an useful feature for frontend web development. When someone proposes to merge a PR, the PR preview feature will show the intended changes to the website. This is a great way to check whether the changes are correct or not. There are a few companies that provide generous free services for PR preview, including Netlify. One interesting point that I learned when researching on PR previews is that deploys are usually "single use" and there are some mechanisms in place to ensure that they do not show up and affect the SEO of the original website.
+
+- [Why My Blog Stopped Using Deploy Previews May 31, 2021](https://www.ryanfiller.com/blog/why-my-blog-stopped-using-deploy-previews)
 
 #### Semantic versioning
 Git tags
@@ -123,7 +147,6 @@ Thanks to the developer community, I was able to get the following solution that
 
 <panel header="### HTML" type="seamless" peek>
 
-#### HTML
 Deprecation, in a technical sense, is the discouragement from using an old feature.
 In HTML, there are many elements that get deprecated over time to improve the language. The main reason behind it is a separation of concerns.
 The introduction of external stylesheets (CSS) means HTML has evolved to focus on content, and not on style.
@@ -143,6 +166,6 @@ Sometimes it takes forever for developers to migrate their code over, perhaps be
 Even when deciding on what features to decrecate, it could be a difficult argument to make. One unexpected thing that I discovered about HTML element deprecation is that althought the `<big>` tag is now deprecated, the `<small>` tag is not. When the use of a feature is so widespread, it is possible to
 derive semantic meaning to save it from deprecation.
 
-- [Why <big> is not in HTML 5 Tag list while <small> is?](https://stackoverflow.com/questions/2260024/why-big-is-not-in-html-5-tag-list-while-small-is)
+- [Why \<big\> is not in HTML 5 Tag list while \<small\> is?](https://stackoverflow.com/questions/2260024/why-big-is-not-in-html-5-tag-list-while-small-is)
 - [Why Do Some HTML Elements Become Deprecated?](https://css-tricks.com/why-do-some-html-elements-become-deprecated/)
 </panel>
