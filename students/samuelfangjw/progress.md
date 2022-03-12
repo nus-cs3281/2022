@@ -27,7 +27,7 @@
 | 7 | Reviewed PR: [Fix incorrect loading for student result page #11604](https://github.com/TEAMMATES/teammates/pull/11604) |
 | 7 | Reviewed PR: [Instructor create session: default questions: replace 'contribution question' #11613](https://github.com/TEAMMATES/teammates/pull/11613) |
 | 8 | Submitted Issue: [Remove overridden text-break class #11633](https://github.com/TEAMMATES/teammates/issues/11633) |
-| 8 | Authored PR (awaiting review): [Remove overridden text-break class #11634](https://github.com/TEAMMATES/teammates/pull/11634) |
+| 8 | Authored PR (merged): [Remove overridden text-break class #11634](https://github.com/TEAMMATES/teammates/pull/11634) |
 | 8 | Authored PR (merged): [Admin: Give a way to remove unregistered instructors and their data #11582](https://github.com/TEAMMATES/teammates/pull/11582) |
 | 8 | Reviewed PR: [New instructors: set the session timestamps of the sample course to match user #11627](https://github.com/TEAMMATES/teammates/pull/11627) |
 | 8 | Reviewed PR: [Selective Deadline Extensions - Get selective deadlines #11606](https://github.com/TEAMMATES/teammates/pull/11606) |
