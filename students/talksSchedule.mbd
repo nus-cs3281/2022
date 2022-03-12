@@ -1,4 +1,5 @@
 <frontmatter>
+title: CS3282 - Lightning Talks
 footer:
 </frontmatter>
 {% from "cs3282-index.mbd" import projects %}
