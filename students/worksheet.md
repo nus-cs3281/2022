@@ -1,7 +1,7 @@
 <frontmatter>
 footer:
 </frontmatter>
-{% from "index.mbd" import projects %}
+{% from "index.md" import projects %}
 
 # Feedback for Round A Slides
 

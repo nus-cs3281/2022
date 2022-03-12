@@ -1,7 +1,7 @@
 <frontmatter>
 footer:
 </frontmatter>
-{% from "cs3282-index.mbd" import projects %}
+{% from "cs3282-index.md" import projects %}
 
 {% macro print_row(student) %}
 <tr>
