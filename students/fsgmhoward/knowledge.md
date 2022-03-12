@@ -49,6 +49,33 @@ Document Referred:
 * https://angular.io/guide/attribute-directives
 * https://angular.io/api/core/HostListener
 
+### Angular: EventEmitter and Handlers
+
+This is a way to synchronize and pass output data from a sub-component to its parent component. It is very
+convenient in use.
+
+Document Referred:
+* https://angular.io/api/core/EventEmitter
+* https://angular.io/api/core/Output
+
+### Jest: Fixing Failed Test
+
+During development, I encountered problem of failing tests. One issue is the missing dependencies. By default,
+when generate Angular's component using `ng generate`, the jest test file does not import the module itself but
+declares the component in the test file.
+
+This leads to missing dependencies for rendering the component during the test. However, if I import the module
+in the test file, it will show an error saying the component is declared in multiple modules. The way to resolve
+this is to remove the declaration of component from the test.
+
+The other issue encountered is the error of attempt to convert circular structure to json. This is mainly due to
+missing dependencies during the initialization of tests. The link below provides a easy way to check which module
+is missing for imports.
+
+Document Referred:
+* https://stackoverflow.com/questions/45764202/angular-test-fails-because-component-is-part-of-the-declarations-of-2-modules
+* https://stackoverflow.com/questions/63895685/unhandledpromiserejectionwarning-typeerror-converting-circular-structure-to-js
+
 ### RxJS: Observable, Pipe, Finalize()
 
 Observable is runned asynchronously and if there is the other async function running within an observable (such

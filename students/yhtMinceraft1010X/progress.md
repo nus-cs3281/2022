@@ -16,3 +16,4 @@
 | Recess | Merged PR: [Convert datetime functionalities to java.time package #1625](https://github.com/reposense/RepoSense/pull/1625) |
 | 7      | Reviewed PR: [Separate backend and frontend responsibilites #1691](https://github.com/reposense/RepoSense/pull/1691) |
 | 7      | Merged PR:[Docs: fix table format in configFiles.md #1666](https://github.com/reposense/RepoSense/pull/1666) |
+| 8 | Reviewed PR: [Replace cdn links to import from node_modules instead #1710](https://github.com/reposense/RepoSense/pull/1710) |
