@@ -1,4 +1,5 @@
 <frontmatter>
+title: CS3281 - Knowledge gained from Projects
 pageNav: 2
 </frontmatter>
 {% from "index.mbd" import projects %}

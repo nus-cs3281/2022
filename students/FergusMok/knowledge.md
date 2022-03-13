@@ -1,3 +1,28 @@
+# Frontend
+### Angular
+Angular is a frontend framework built on TypeScript. A majority of Angular's functions uses Typescript decorators, which are adds functionalities to functions and class.
+
+Each Angular component uses a selector (for other components to reference this component), HTML template, and CSS file to decorate the HTML template.
+
+Furthermore, within the HTML template, we are able to use Angular directives. Examples are *ngIf, *ngFor. The asterik is synthetic sugar that surrounds the HTML with a \<ng-template>, and is useful for adding and removing tag elements. Another interesting feature is that Angular supports two-way data binding directly, where the HTML's value can affect the actual value and vice versa. Done with [(NgModel)]
+
+See: 
+1. https://angular.io/guidestructural-directives#what-are-structural-directives;
+2. https://angular.io/guide/two-way-binding#adding-two-way-data-binding
+
+
+Angular's CLI is also extremely useful, and most basic features from building and testing are ready out of the box. 
+
+See: https://angular.io/cli
+
+### RxJS
+RxJS is a library that helps with async and event-based functions in TEAMMATES through Observables and Subscriptions. RxJS can also be used with other frameworks, like React and Vue. 
+
+Common pattern of usage:
+1. Create a service class, with a function that calls the backend API. This function returns an Observable.
+2. We can call the service from our component, and add on <b>operators</b> to the Observable, such as pipe and subscribe.
+3. Pipe will chain observable operators, and subscribe will activate the observabe to listen for the emitted values.
+# Backend
 ### Google Cloud Datastore
 I learnt how Datastore's key-value works, it's strengths and limitations, and important conventions. These conventions are seemly counterintuitive for users with an SQL background for smaller applications, but makes sense when building applications at scale.
 
