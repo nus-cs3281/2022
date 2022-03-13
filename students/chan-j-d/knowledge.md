@@ -97,6 +97,15 @@ Every commit in the log output displays the hash, author with email, date and me
 - It is possible temporarily set `user.name` as `<>`. However, it will not allow the user to commit, citing an invalid username.
   - It is also possible to set `user.name` as an empty string which is equivalent to resetting it. Git will not allow commits until a `user.name` has been set.
 
+## Javascript
+New language for me, no prior experience. Learnt how to read and interpret most of the lines of Javascript in RepoSense.
+- Javascript has `Object`s which are a container of key-value pairs listing its properties, and some pre-defined methods. 
+  - Can perform operations on `Object`s similar to what can be done to a map. Use `Object.entries(object)` to enumerate the key-value pairs.
+  - The properties of an object can be created, edited and accessed from anywhere more similar to languages like Python's OOP
+- Javascript uses `(args...) => output` to write lambda functions as opposed to `(args...) -> output` for Java.
+- Javascript has something known as object destructuring where we can extract the properties of an object.
+  - Given something like `author = {name: JD, repo: RepoSense}`, then doing `const {name, repo} = author` would allow us to access the `name` and `repo` as local variables.
+
 ## Others
 ### "file" URI Scheme
 - Specification can be found here [RFC8089](https://datatracker.ietf.org/doc/html/rfc8089).
@@ -117,3 +126,9 @@ cURL is a command-line tool to transfer data to or from a server using support p
   - Functional arguments can be referenced from within the function declaration block with `${1}` referring to the first argument, `${2}` referring to the second argument, etc.
   - These functional arguments can be specified by a user via `function_name "$argument1" "$argument2"`
   - `$@` can also be used to refer to all of the shell script's CLI arguments. It can be iterated through like an array.
+
+### Other popular remote repository hosts
+- Any remote site that allows access to a `.git` directory is capable of hosting a remote repository
+- Popular remote repository domains besides GitHub include sites like GitLab and BitBucket
+  - Interacting with these are nearly identical to interacting with GitHub, with `https` and `ssh` options to clone a repository.
+  - Relevant to RepoSense: the paths to commits and other features are usually different between the sites. For RepoSense to support all these websites, it'll have to take into account the differences in the path to these resources on the website.
