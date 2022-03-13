@@ -17,3 +17,4 @@
 | 7      | Reviewed PR: [Separate backend and frontend responsibilites #1691](https://github.com/reposense/RepoSense/pull/1691) |
 | 7      | Merged PR:[Docs: fix table format in configFiles.md #1666](https://github.com/reposense/RepoSense/pull/1666) |
 | 8 | Reviewed PR: [Replace cdn links to import from node_modules instead #1710](https://github.com/reposense/RepoSense/pull/1710) |
+| 8 | Reviewed PR: [Allow RepoSense to accept different types of URLs besides https github #1644](https://github.com/reposense/RepoSense/pull/1644) |
