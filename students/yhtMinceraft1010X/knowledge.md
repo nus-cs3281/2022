@@ -42,3 +42,25 @@ Sometimes, the toolstack used in a project may be very out-of-date, requiring a 
   * While searching through the release notes, take note of any deprecations and compatibility-breaking changes.
   * Take note of any third-party dependencies. Some of them may not have been upgraded alongside the main tools. 
 * After upgrading the relevant tools, check that the toolstack/project requirements are preserved.
+
+### Gradle Task Configuration Avoidance
+Gradle has [3 build phases](https://docs.gradle.org/current/userguide/build_lifecycle.html#sec:configuration_and_execution_of_a_single_project_build):
+* Initialization - determine which projects are part of the build
+* Configuration - evaluate build script file and the task properties and dependencies
+* Execution - run the relevant tasks
+
+While trying to upgrade Gradle for RepoSense, I came across the [task configuration avoidance](https://docs.gradle.org/current/userguide/task_configuration_avoidance.html) feature, which allows skipping the configuration of unwanted tasks:
+```
+tasks.register("taskA") {
+    // Configure the task here
+}
+```
+What `tasks.register` does is to indicate that such a task exists. However, the task is only created and configured proper if something else in the build needs it.
+
+Using the below syntax eagerly configures the task, regardless of whether the task is ultimately needed or not:
+```
+task taskA {
+    // Configure the task here
+}
+```
+By avoiding task configuration for unwanted tasks, build time for the necessary tasks can be reduced.
