@@ -97,7 +97,7 @@ Every commit in the log output displays the hash, author with email, date and me
 - It is possible temporarily set `user.name` as `<>`. However, it will not allow the user to commit, citing an invalid username.
   - It is also possible to set `user.name` as an empty string which is equivalent to resetting it. Git will not allow commits until a `user.name` has been set.
 
-## Javascript
+## Javascript/Vue.js
 New language for me, no prior experience. Learnt how to read and interpret most of the lines of Javascript in RepoSense.
 - Javascript has `Object`s which are a container of key-value pairs listing its properties, and some pre-defined methods. 
   - Can perform operations on `Object`s similar to what can be done to a map. Use `Object.entries(object)` to enumerate the key-value pairs.
@@ -105,6 +105,19 @@ New language for me, no prior experience. Learnt how to read and interpret most 
 - Javascript uses `(args...) => output` to write lambda functions as opposed to `(args...) -> output` for Java.
 - Javascript has something known as object destructuring where we can extract the properties of an object.
   - Given something like `author = {name: JD, repo: RepoSense}`, then doing `const {name, repo} = author` would allow us to access the `name` and `repo` as local variables.
+
+Interacting with objects on a webpage:
+- Each click on an interactive component on the webpage fires off a `clickEvent`. 
+  - In Vue, we can tag listener methods to a specific event a component might encounter. 
+  - The event itself also contains details about the circumstances in which it was triggered such as other buttons that were pressed while the `clickEvent` was created.
+  - The default behaviour for clicking on an anchor link object is to open the hyperlink reference. This can be prevented with a listener that does `event.preventDefault()`.
+
+## HTML
+- `href` attribute of an anchor object provides the hyperlink reference to whichever URL page the anchor object is supposed to open.
+  - Notably, if `href` is not set and left as `undefined`, then a link will not be opened even if `target` is set.
+- In conjunction with the `href` property, there is the `target` property which designates where the hyperlink will be opened.
+  - Most commonly used in RepoSense is `target="_blank"` which means to open a new window or tab.
+  - There are other alternatives such as `_self` for opening in the same frame, `_parent` and `_top`.
 
 ## Others
 ### "file" URI Scheme
