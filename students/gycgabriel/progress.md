@@ -4,6 +4,7 @@
 | 2 | Authored PR (closed) [#862 Add examples for bug severity labels](https://github.com/CATcher-org/CATcher/pull/862) |
 | 3 | Authored PR (on-hold) [#867 Follow recommended practice for ViewChild](https://github.com/CATcher-org/CATcher/pull/867) |
 | 4 | Opened issue [#875 Add launch.json to .gitignore](https://github.com/CATcher-org/CATcher/issues/875) |
+| 5 | Reviewed PR [#878 Add better logging](https://github.com/CATcher-org/CATcher/pull/878) |
 | R | Merged PR [#888 Add launch.json to repository](https://github.com/CATcher-org/CATcher/pull/888) |
 | 7 | Merged PR [#885 Tester Response: Show disagreements in Issues Responded](https://github.com/CATcher-org/CATcher/pull/885) |
 | 7 | Opened issue [#889 Suggestion: Add a timed toast to undo deleting issues](https://github.com/CATcher-org/CATcher/issues/889) |
