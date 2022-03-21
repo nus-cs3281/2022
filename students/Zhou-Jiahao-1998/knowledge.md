@@ -42,3 +42,11 @@ watch: {
     }
 }
 ```
+### Checking Plugin GitHub Issue Page
+When dealing with a plugin (debugging/upgrading), we sometimes face some unexplained behaviours. I spent hours debugging and searching for decumentation only to realise that it is a bug of the plugin. Always check the issue page of the plugin when in doubt, especially when it comes to compatibility issues after upgrading the plugin or other plugins. 
+
+### Opening Issues
+When opening an issue, we should make the problem clear. We should explicitly state the difference and the expected behaviour so that anyone can understand the issue clearly. An unclear issue may lead to misunderstanding and lead to hours wasted on an unrelated work.
+
+### Working with JSON files
+Never put any comments in `.json` files. Comments of the form `//...` and `/*...*/` are not allowed. Some IDEs do not flag out this as an error and such files might be able to be used normally. However, when error arises due to this issue, it is extremely difficult to find the error as the error message often do not point to the incorrect files.
