@@ -16,6 +16,8 @@
 | Recess | Merged PR: [Convert datetime functionalities to java.time package #1625](https://github.com/reposense/RepoSense/pull/1625) |
 | 7      | Reviewed PR: [Separate backend and frontend responsibilites #1691](https://github.com/reposense/RepoSense/pull/1691) |
 | 7      | Merged PR:[Docs: fix table format in configFiles.md #1666](https://github.com/reposense/RepoSense/pull/1666) |
-| 8 | Reviewed PR: [Replace cdn links to import from node_modules instead #1710](https://github.com/reposense/RepoSense/pull/1710) |
-| 8 | Reviewed PR: [Allow RepoSense to accept different types of URLs besides https github #1644](https://github.com/reposense/RepoSense/pull/1644) |
-| 9 | Merged PR: [Upgrade to Cypress 9.5.1 #1713](https://github.com/reposense/RepoSense/pull/1713) |
+| 8      | Reviewed PR: [Replace cdn links to import from node_modules instead #1710](https://github.com/reposense/RepoSense/pull/1710) |
+| 8      | Reviewed PR: [Allow RepoSense to accept different types of URLs besides https github #1644](https://github.com/reposense/RepoSense/pull/1644) |
+| 9      | Merged PR: [Upgrade to Cypress 9.5.1 #1713](https://github.com/reposense/RepoSense/pull/1713) |
+| 9      | Reviewed PR: [Change highlight.js theme to Github #1722](https://github.com/reposense/RepoSense/pull/1722) |
+| 10     | Reviewed PR: [Fix tilde pathing in repo config not working #1727](https://github.com/reposense/RepoSense/pull/1727/files) |
