@@ -10,17 +10,19 @@ For my next contribution, I worked on fixing a [bug related to the `Copy to clip
 
 For my third contribution, I worked on resolving an issue related to the UI component. For this particular issue, [the usage of `<code>` tag was not working on one of the components and was instead showing up as raw string](https://github.com/phpmyadmin/phpmyadmin/issues/17348). For this task, I had to locate the component that contained the relevant code. However, the code was in a generic `Description` file and the issue did not come from the file itself. Then, I tried to find out which particular component used this description and finally discovered that the issue was coming from a method that sanitizes codes. This method causes the input with `<code>` tag to be treated as raw string and hence the browser will not process it as a HTML code. To resolve this, I replaced the usage of `<code>` tag with BBcode, which will return a valid HTML element in the sanitize method.
 
-Links to PRs:
-[Set autocomplete off for 'change password' and 'login information' forms #17226](https://github.com/phpmyadmin/phpmyadmin/pull/17226)
-[Fix #17228 - Resolve formatting of copy to clipboard with NULL values #17232](https://github.com/phpmyadmin/phpmyadmin/pull/17232)
-[Fix #17348 - Resolve formatting of <code> in Preferences > Export #17350](https://github.com/phpmyadmin/phpmyadmin/pull/17350)
+**Links to PRs:**  
+[Set autocomplete off for 'change password' and 'login information' forms #17226](https://github.com/phpmyadmin/phpmyadmin/pull/17226)  
+[Fix #17228 - Resolve formatting of copy to clipboard with NULL values #17232](https://github.com/phpmyadmin/phpmyadmin/pull/17232)  
+[Fix #17348 - Resolve formatting of <code> in Preferences > Export #17350](https://github.com/phpmyadmin/phpmyadmin/pull/17350)  
 
 ### My Learning Record
 
 The typical workflow of phpMyAdmin for contributing code can be found in their [contribution guide](https://www.phpmyadmin.net/develop/). First, fork the repository and create a branch for new changes. Then, once done, open a new pull request from that branch against the relevant branch of the main repository. The pull request should be linked to the relevant issue and should contain a description of the changes. Next, the developers from phpMyAdmin will mark the relevant issue with the label [`has-pr`](https://github.com/phpmyadmin/phpmyadmin/labels/has-pr). The developers will then review the pull request and if satisfied, merge it into the relevant branch. Comparing this to MarkBind's workflow, I think both of them are quite similar. One thing that I find interesting is the labelling of the issue with `has-pr` if there is already an existing open PR fixing the issue. I think we can also adopt a similar practice in MarkBind so that the issues that already have in-progress PRs can be quickly identified. This can help current and new developers to quickly filter out the issues that already have fixes and focus on issues that need to be fixed. Although GitHub provides the `linked pull request` label, I feel that this is not sufficient as sometimes an issue can require more than 1 pull request or has multiple components. In this case, having an explicit label would allow developers to know if an issue is available to work on.
 
-In terms of setting up, phpMyAdmin requires PHP, a web server and either a MySQL or MariaDB to run on. A web server is needed so that phpMyAdmin can be accessed through the localhost on the browser. Instead of having to set up each of the required software manually which can be time consuming, especially for configuring Apache and MariaDB, a really quick way to set this up is to use [XAMPP](https://www.apachefriends.org/index.html). XAMPP allows users to quickly set up a PHP development environment which contains Apache, MariaDB, PHP and Perl. It also handles the configuration of these services. The control panel allows each of the services to be started or stopped with a single click. I feel that this tool is really useful for developers that are working on projects that require PHP, Apache or MySQL/MariaDB. XAMPP really helps to streamline the setting up process and speed up the development.
+In terms of setting up, phpMyAdmin requires PHP, a web server and either a MySQL or MariaDB to run on. A web server is needed so that phpMyAdmin can be accessed through the localhost on the browser. Instead of having to set up each of the required software manually which can be time consuming, especially for configuring Apache and MariaDB, a really quick way to set this up is to use [XAMPP](https://www.apachefriends.org/index.html). XAMPP allows users to quickly set up a PHP development environment which contains Apache, MariaDB, PHP and Perl. It also handles the configuration of these services. The control panel allows each of the services to be started or stopped with a single click. I feel that this tool is really useful for developers that are working on projects that require PHP, Apache or MySQL/MariaDB. XAMPP really helps to streamline the setting up process and speed up the development.  
 
+<br>
+<br>
 
 ### Project 2: [WordPress Gutenberg](https://github.com/WordPress/gutenberg)
 
@@ -30,7 +32,7 @@ Gutenberg is a plugin for the popular website builder, WordPress, which is usual
 
 I contributed to the project by fixing an [issue related to the consistency of the UI component in the `Site Editor` feature](https://github.com/WordPress/gutenberg/issues/29886). Previously, in the save panel of the `Site Editor`, the close panel button is an `X` icon whereas the close panel button on the `Post Editor` is a cancel button. To resolve this inconsistency, I updated the close panel button in the `Site Editor` from the `X` icon to the standardised cancel button.
 
-Link to PR:
+**Link to PR:**  
 [Site Editor: Update save panel's cancel button from icon to visible text #37310](https://github.com/WordPress/gutenberg/pull/37310)
 
 ### My Learning Record
