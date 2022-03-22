@@ -61,3 +61,29 @@ Resources:
 * [Static query migration guide](https://angular.io/guide/static-query-migration#what-does-this-flag-mean-and-why-is-it-necessary)
 * [Video: Better concepts, less code in Angular 2 - Victor Savkin and Tobias Bosch](https://www.youtube.com/watch?v=4YmnbGoh49U&ab_channel=AngularConnect)
 * [What's the difference between @ViewChild and @ContentChild?](https://stackoverflow.com/questions/34326745/whats-the-difference-between-viewchild-and-contentchild)
+
+
+### Property Binding
+
+Square brackets in html tags in angular indicate that the right hand side is a dynamic expression. For example:
+
+```
+<span
+        (click)="$event.stopPropagation()"
+        *ngIf="issue.testerDisagree"
+        [ngStyle]="this.labelService.setLabelStyle(this.labelService.getColorOfLabel('Rejected'))" >
+
+```
+
+The dynamic expression can be evaluated in the context of the corresponding .ts file of the html file.
+
+### Event binding
+
+Parenthesis within html tags, for example `(click)` are used to call the component's corresponding method on click. In the example above, `$event.stopPropagation()` is a Javascript call that prevents the label `Disagree` within the issue bar from being clickable because its parent is clickable. The click event from parent is stopped from propagating to this particular child. 
+
+
+Resource:
+* [Angular Doc Property Binding](https://angular.io/guide/property-binding)
+* [Angular Doc Event Binding](https://angular.io/guide/event-binding)
+* [StackOverflow simple summary](https://stackoverflow.com/a/35944965)
+* [StackOverflow Stop Propagation](https://stackoverflow.com/questions/32315647/javascript-how-does-event-stoppropagation-work)

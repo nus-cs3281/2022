@@ -51,3 +51,37 @@ Resources
 * [What to do when Vue hydration fails | blog.Lichter.io](https://blog.lichter.io/posts/vue-hydration-error/)
   * This resource was very helpful in debugging the source of hydration errors: [Solving the hydration failure](https://blog.lichter.io/posts/vue-hydration-error/#solving-the-hydration-failure) 
 
+### Useful Git tricks
+
+#### `--skip-worktree`
+
+After adding some config files (e.g. `.ignore` for [Ag](https://github.com/ggreer/the_silver_searcher)), I wanted to ignore these config files to keep my git history clean. 
+I first tried using `git update-index --skip-worktree` to "hide" the `.ignore` file, but this didn't work because the file wasn't indexed yet (so `update-index` doesn't make sense).
+
+Instead, the following approach worked:
+1. Add `.ignore` to `.gitignore`
+2. `git update-index --skip-worktree .gitignore`
+  * You can "undo" this in the future using the `--no-skip-worktree` flag
+
+From here, `git status` shows no changes to the `.gitignore` file, and `.ignore` is no longer tracked.
+
+Another option was `--assume-unchanged` instead of `--skip-worktree` (comparison is linked under "Resources"). 
+
+Resources: 
+
+* [Difference Between 'assume-unchanged' and 'skip-worktree'](https://stackoverflow.com/questions/13630849/git-difference-between-assume-unchanged-and-skip-worktree)
+* [Summarised table comparison](https://fallengamer.livejournal.com/93321.html)
+
+### npm Dependency Versions
+
+While updating package.json, I had to clarify the meaning of some versioning syntaxes:
+
+* `~1.2.3` means "approximately equivalent to v1.2.3" => accepts all future patch versions, i.e. ≥1.2.3 and <1.3.0
+* `^1.2.3` means "compatible with v1.2.3" => accepts all future minor/patch versions, i.e. ≥1.2.3 and <2.0.0
+* `@org/package` => 'org' is a scope, and 'package' is a package name within the scope
+
+Resources: 
+
+* [Specifying version ranges for dependencies](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#dependencies)
+* [Scope](https://docs.npmjs.com/cli/v8/using-npm/scope)
+

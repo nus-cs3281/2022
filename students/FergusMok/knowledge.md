@@ -22,6 +22,11 @@ Common pattern of usage:
 1. Create a service class, with a function that calls the backend API. This function returns an Observable.
 2. We can call the service from our component, and add on <b>operators</b> to the Observable, such as pipe and subscribe.
 3. Pipe will chain observable operators, and subscribe will activate the observabe to listen for the emitted values.
+
+### Jasmine and Jest
+Jasmine is a testing framework. It describes test cases, and can make use of `spies`, that can mock return values, track the status of the function. Furthermore, combined with using inspecting HTML elements, we can check the values of the components in different conditions.
+Jest is another testing framework used for snapshots. We're able to take snapshots, save them, and compare them later when running the tests again. This is especially useful for regression testing.
+
 # Backend
 ### Google Cloud Datastore
 I learnt how Datastore's key-value works, it's strengths and limitations, and important conventions. These conventions are seemly counterintuitive for users with an SQL background for smaller applications, but makes sense when building applications at scale.
@@ -47,3 +52,7 @@ Datastore is built in a way that requires indexes for every single field that re
 However, Google does not bill for storage, and only for writes and reads.
 
 Google's tutorial: https://youtu.be/d4CiMWy0J70?t=75
+
+
+### Additional Tips
+1. To pass additional flags to `npm run`, you can use append `-- --<flag>`. E.g `npm run test -- --detect-open-handles`
