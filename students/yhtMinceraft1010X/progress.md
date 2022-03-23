@@ -21,3 +21,7 @@
 | 9      | Merged PR: [Upgrade to Cypress 9.5.1 #1713](https://github.com/reposense/RepoSense/pull/1713) |
 | 9      | Reviewed PR: [Change highlight.js theme to Github #1722](https://github.com/reposense/RepoSense/pull/1722) |
 | 10     | Reviewed PR: [Fix tilde pathing in repo config not working #1727](https://github.com/reposense/RepoSense/pull/1727/files) |
+| 10 | Merged PR: [Upgrade to Cypress 9.5.1 #1713](https://github.com/reposense/RepoSense/pull/1713) |
+| 10 | Reviewed PR: [Run Windows CI on GitHub actions #1731](https://github.com/reposense/RepoSense/pull/1731) |
+| 10 | Reviewed PR: [Remove unused test resource for ConfigSystemTest #1730](https://github.com/reposense/RepoSense/pull/1730) |
+| 10 | Reviewed PR: [Delete PR deployments with >100 deployments #1732](https://github.com/reposense/RepoSense/pull/1732) |
