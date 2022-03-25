@@ -25,3 +25,4 @@
 | 10 | Reviewed PR: [Run Windows CI on GitHub actions #1731](https://github.com/reposense/RepoSense/pull/1731) |
 | 10 | Reviewed PR: [Remove unused test resource for ConfigSystemTest #1730](https://github.com/reposense/RepoSense/pull/1730) |
 | 10 | Reviewed PR: [Delete PR deployments with >100 deployments #1732](https://github.com/reposense/RepoSense/pull/1732) |
+| 10 | Merged PR: [Enhance Checkstyle #1652](https://github.com/reposense/RepoSense/pull/1652) |
