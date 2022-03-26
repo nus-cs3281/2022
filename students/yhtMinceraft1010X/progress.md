@@ -26,3 +26,4 @@
 | 10 | Reviewed PR: [Remove unused test resource for ConfigSystemTest #1730](https://github.com/reposense/RepoSense/pull/1730) |
 | 10 | Reviewed PR: [Delete PR deployments with >100 deployments #1732](https://github.com/reposense/RepoSense/pull/1732) |
 | 10 | Merged PR: [Enhance Checkstyle #1652](https://github.com/reposense/RepoSense/pull/1652) |
+| 10 | Merged PR: [Missing javadoc for functions #1650](https://github.com/reposense/RepoSense/pull/1650) |
