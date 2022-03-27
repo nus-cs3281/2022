@@ -24,3 +24,6 @@
 | 9 | Merged PR: [[#1634] Replace cdn links to import from node_modules instead](https://github.com/reposense/RepoSense/pull/1710)
 | 9 | Reviewed PR [#1667](https://github.com/reposense/RepoSense/pull/1687#pullrequestreview-912736949), [#1682](https://github.com/reposense/RepoSense/pull/1685#pullrequestreview-901024733), [#1703](https://github.com/reposense/RepoSense/pull/1714)
 | 9 | Opened PR: [[#1632] Add typescript](https://github.com/reposense/RepoSense/pull/1721)
+| 10 | Finalised and documented PR: [[#1632] Add typescript](https://github.com/reposense/RepoSense/pull/1721)
+| 10 | Respond to query [#1721](https://github.com/reposense/RepoSense/pull/1721)
+| 10 | Reviewed PR: [#1728](https://github.com/reposense/RepoSense/pull/1729)

@@ -50,3 +50,6 @@ When opening an issue, we should make the problem clear. We should explicitly st
 
 ### Working with JSON files
 Never put any comments in `.json` files. Comments of the form `//...` and `/*...*/` are not allowed. Some IDEs do not flag out this as an error and such files might be able to be used normally. However, when error arises due to this issue, it is extremely difficult to find the error as the error message often do not point to the incorrect files.
+
+### Class-style component syntax
+I came across this term during the integration of Typescript to our project. In Vue, this means that the syntax will be `export default class Counter extends Vue`. This is an alternative to the normal style we use. Some of the advantages includes the ability to utilize some ECMAScript language features such as class inheritance and decorators. For more details, please refer to [here](https://class-component.vuejs.org).
