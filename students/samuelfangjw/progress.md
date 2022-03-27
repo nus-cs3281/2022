@@ -37,7 +37,7 @@
 | 10 | Submitted Issue: [Give admin a way to resend account registration link to instructors #11658](https://github.com/TEAMMATES/teammates/issues/11658) |
 | 10 | Authored PR (merged): [Devise a better way to handle duplicate account requests #11657](https://github.com/TEAMMATES/teammates/pull/11657) |
 | 10 | Authored PR (merged): [Add deadline extension entity to storage component diagram #11668](https://github.com/TEAMMATES/teammates/pull/11668) |
-| 10 | Authored PR (final review): [Time picker displaying duplicate options #11677](https://github.com/TEAMMATES/teammates/pull/11677) |
+| 10 | Authored PR (merged): [Time picker displaying duplicate options #11677](https://github.com/TEAMMATES/teammates/pull/11677) |
 | 10 | Reviewed PR: [Selective Deadline Extensions - Frontend tables and modals #11603](https://github.com/TEAMMATES/teammates/pull/11603) |
 | 10 | Reviewed PR: [Selective Deadline Extensions - Integrate the backend #11671](https://github.com/TEAMMATES/teammates/pull/11671) |
 | 10 | Reviewed PR: [Minor fixes for angular.json and typos #11672](https://github.com/TEAMMATES/teammates/pull/11672) |
