@@ -38,5 +38,31 @@ References:
 * https://cloud.google.com/datastore/docs/concepts/queries#restrictions_on_queries
 * https://cloud.google.com/datastore/docs/concepts/storage-size#index_entry_size
 
+### Higher-Order RxJs Mapping Operators
+
+[RxJS](https://rxjs.dev/guide/overview) is a library used in TEAMMATES for composing asynchronous and event-based programs using observable sequences. While the basic operators (map, filter, etc.) are relatively straighforward to use, operators that work on higher-order observables can be quite challenging to wrap one's head around.
+
+Higher-order Observables are observables that operate on or emit other observables (analogous to the relationship between functions and higher-order functions). The three most common higher-order mapping operators (operators that work on higher-oder observables) are `concatMap`, `mergeMap` and `switchMap`.
+
+#### Basics
+
+Higher-order mapping operators maps an observable that emits multiple observables (inner observables) into a single observable. As a rule of thumb, if your code contains nested `.subscribes`, you probably want to use a higher-order mapping operator.
+
+#### Differences between concatMap, mergeMap and switchMap
+
+So what's the difference between the three operators mentioned? Well they solve the problem of _how_ the inner observables should be mapped. Since the timing in which observables emit values are not fixed, the order in which they emit values may be random. Depending on our application, we need different strategies to combine the values emitted from these observables into one sequence of values.
+
+* `concatMap`: Use this when sequential ordering is desired. `concatMap` subscribes to the first inner observable. It only subscribes to the second inner observable once the first one is complete.
+* `mergeMap`: First come first serve! Subscribe to all observables and emit values in order in which they are emitted by the inner observables.
+* `switchMap`: It's like concatMap, except we unsubscribe from the first observable as soon as the second observable starts to emit values. This captures the intent "I only care about the most recent request". 
+
+Refer to this [excellent resource](https://blog.angular-university.io/rxjs-higher-order-mapping/) for a more comprehensive look at higher-order mapping operators including the motivations behind each operator.
+
+References:
+* https://rxjs.dev/guide/overview
+* https://blog.angular-university.io/rxjs-higher-order-mapping/
+
 ### Tips and Tricks
+
 * When viewing a repository or pull request, press `.` to bring up the built in vs-code based web editor. Especially handy if you need to view other parts of the codebase when reviewing a PR.
+* You can [create a branch directly from an issue on GitHub](https://github.blog/2022-03-21-start-working-on-github-issues-faster/). Yes, even if the branch is in a forked repo!
