@@ -11,5 +11,10 @@
 | 5 | Merged PR [#878 Add better logging](https://github.com/CATcher-org/CATcher/pull/878) |
 | 6 | Reviewed PR [#881 Fix #880 Clicking on open issue in new tab gives error](https://github.com/CATcher-org/CATcher/pull/881) |
 | 6 | Reviewed PR [#891 Refactor colour constants in LabelService and CSS constants in LabelConstants](https://github.com/CATcher-org/CATcher/pull/891) |
-| 7 | Authored PR (in progress) [#894 Improve user experience of choosing a duplicate issue in Team Response phase](https://github.com/CATcher-org/CATcher/pull/894) |
-| 7 | Authored PR [#899 Create issue templates](https://github.com/CATcher-org/CATcher/pull/899) |
+| 7 | Merged PR [#894 Improve user experience of choosing a duplicate issue in Team Response phase](https://github.com/CATcher-org/CATcher/pull/894) |
+| 7 | Merged PR [#899 Create issue templates](https://github.com/CATcher-org/CATcher/pull/899) |
+| 8 | Opened issue [#909 Parsing bug for duplicate issues in Team response phase](https://github.com/CATcher-org/CATcher/issues/909) |
+| 9 | Reviewed PR [#910 Use coroutine parsers for Issue Templates](https://github.com/CATcher-org/CATcher/pull/910) |
+| 10 | Reviewed PR [#913 Remove lower priority check for duplicate issues](https://github.com/CATcher-org/CATcher/pull/913) |
+| 10 | Opened issue [#916 Suggestion: Use Github API to render markdown previews](https://github.com/CATcher-org/CATcher/issues/916) |
+| 11 | Reviewed PR [#16 UG Instructors: Add Create Session Link for Students](https://github.com/CATcher-org/catcher-org.github.io/pull/16) |
