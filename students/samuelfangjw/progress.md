@@ -31,4 +31,14 @@
 | 8 | Authored PR (merged): [Admin: Give a way to remove unregistered instructors and their data #11582](https://github.com/TEAMMATES/teammates/pull/11582) |
 | 8 | Reviewed PR: [New instructors: set the session timestamps of the sample course to match user #11627](https://github.com/TEAMMATES/teammates/pull/11627) |
 | 8 | Reviewed PR: [Selective Deadline Extensions - Get selective deadlines #11606](https://github.com/TEAMMATES/teammates/pull/11606) |
-| 9 | Authored PR (ongoing): [Selective Deadline Extensions - DeadlineExtension entity and sending of emails #11602](https://github.com/TEAMMATES/teammates/pull/11602) |
+| 9 | Authored PR (merged): [Selective Deadline Extensions - DeadlineExtension entity and sending of emails #11602](https://github.com/TEAMMATES/teammates/pull/11602) |
+| 9 | Reviewed PR: [Selective Deadline Extensions - C_UD selective deadlines #11649](https://github.com/TEAMMATES/teammates/pull/11649) |
+| 10 | Submitted Issue: [Add ESLint rule for member delimiter style #11673](https://github.com/TEAMMATES/teammates/issues/11673) |
+| 10 | Submitted Issue: [Give admin a way to resend account registration link to instructors #11658](https://github.com/TEAMMATES/teammates/issues/11658) |
+| 10 | Authored PR (merged): [Devise a better way to handle duplicate account requests #11657](https://github.com/TEAMMATES/teammates/pull/11657) |
+| 10 | Authored PR (merged): [Add deadline extension entity to storage component diagram #11668](https://github.com/TEAMMATES/teammates/pull/11668) |
+| 10 | Authored PR (merged): [Time picker displaying duplicate options #11677](https://github.com/TEAMMATES/teammates/pull/11677) |
+| 10 | Reviewed PR: [Selective Deadline Extensions - Frontend tables and modals #11603](https://github.com/TEAMMATES/teammates/pull/11603) |
+| 10 | Reviewed PR: [Selective Deadline Extensions - Integrate the backend #11671](https://github.com/TEAMMATES/teammates/pull/11671) |
+| 10 | Reviewed PR: [Minor fixes for angular.json and typos #11672](https://github.com/TEAMMATES/teammates/pull/11672) |
+| 11 | Authored PR (awaiting review): [Add ESLint rule for member delimiter style #11675](https://github.com/TEAMMATES/teammates/pull/11675) |

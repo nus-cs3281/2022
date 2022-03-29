@@ -21,8 +21,11 @@
 | 7      | Reviewed PR: [TEAMMATES (Notification Feature - POST route) #11620](https://github.com/TEAMMATES/teammates/pull/11620)                                               |
 | 8      | Reviewed PR: [TEAMMATES (Notification Feature - GET route) #11625](https://github.com/TEAMMATES/teammates/pull/11625)                                                |
 | 8      | Reviewed PR: [TEAMMATES (Notification feature - Add read notifications to Account entity) #11643](https://github.com/TEAMMATES/teammates/pull/11643)                 |
-| 9      | Authored PR (in progress): [TEAMMATES (Notification feature - Database Test) #11651](https://github.com/TEAMMATES/teammates/pull/11651)                              |
-| 9      | Authored PR (pending final review): [TEAMMATES (Notification feature - admin page delete notification function)](https://github.com/TEAMMATES/teammates/pull/11652)  |
+| 9      | Authored PR (merged): [TEAMMATES (Notification feature - Database Test) #11651](https://github.com/TEAMMATES/teammates/pull/11651)                                   |
+| 9      | Authored PR (merged): [TEAMMATES (Notification feature - admin page delete notification function)](https://github.com/TEAMMATES/teammates/pull/11652)                |
 | 9      | Authored PR (in progress): [TEAMMATES (Notification feature - Admin page update (edit) feature) #11663](https://github.com/TEAMMATES/teammates/pull/11663)           |
 | 9      | Reviewed PR: [TEAMMATES (Add delete notification route) #11650](https://github.com/TEAMMATES/teammates/pull/11650)                                                   |
 | 9      | Reviewed PR: [TEAMMATES (Notification feature - User notification page) #11653](https://github.com/TEAMMATES/teammates/pull/11653)                                   |
+| 10     | Authored PR (under final review): [TEAMMATES (Minor fixes for angular.json and typos) #11672](https://github.com/TEAMMATES/teammates/pull/11672)                     |
+| 10     | Reviewed PR: [TEAMMATES (Notification Feature - PUT notification route) #11665](https://github.com/TEAMMATES/teammates/pull/11665)                                   |
+| 10     | Reviewed PR: [TEAMMATES (Backend for usage statistics collection) #11666](https://github.com/TEAMMATES/teammates/pull/11666)                                         |

@@ -86,3 +86,13 @@ Document Referred:
 * https://rxjs.dev/api/operators/finalize
 * https://rxjs.dev/guide/operators
 * https://rxjs.dev/guide/observable
+
+### TestNG: @BeforeMethod and @AfterMethod
+
+These two are runned before and after every Java unit test methods. So good to use it to set up common variables
+and database entities. For example, for TEAMMATES, `@BeforeMethod` can be used to import all related entities from
+typical data bundle. Then, `@AfterMethod` fetch all IDs and delete all entities to clear the database.
+
+Document Referred:
+* https://www.javatpoint.com/testng-beforemethod-annotation
+* https://www.javadoc.io/doc/org.testng/testng/7.0.0/org/testng/annotations/BeforeMethod.html
