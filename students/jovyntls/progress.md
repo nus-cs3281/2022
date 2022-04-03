@@ -22,7 +22,13 @@
 | 8 | Submitted issue: [Emails are wrongly validated as links #1820](https://github.com/MarkBind/markbind/issues/1820) |
 | 8 | Discussion on issues: [#1825](https://github.com/MarkBind/markbind/issues/1825) |
 | 9 | Reviewed PR: [Include screenshot of dark themed code #1827](https://github.com/MarkBind/markbind/pull/1827) |
-| 9 | Discussion on issues: [#1831](https://github.com/MarkBind/markbind/issues/1831), [#671](https://github.com/MarkBind/markbind/issues/671) |
+| 9 | Discussion on issues: [#1831](https://github.com/MarkBind/markbind/issues/1831), [#671](https://github.com/MarkBind/markbind/issues/671), [#1638](https://github.com/MarkBind/markbind/issues/1638), [#1702](https://github.com/MarkBind/markbind/issues/1702) |
 | 9 | Merged PR: [Update pop-up docs #1832](https://github.com/MarkBind/markbind/pull/1832) |
 | 9 | Merged PR: [Make pop-ups accessible #1833](https://github.com/MarkBind/markbind/pull/1833) |
 | 9 | Merged PR: [Update markdown-it-linkify-images to v2.0.0 #1838](https://github.com/MarkBind/markbind/pull/1838) |
+| 10 | Submitted issue: [Modals accessibility #1841](https://github.com/MarkBind/markbind/issues/1841) |
+| 10 | Merged PR: [Migrate modals from bootstrap-vue to vue-final-modal #1849](https://github.com/MarkBind/markbind/issues/1849) |
+| 11 | Reviewed PR: [Basic Annotation Feature #1858](https://github.com/MarkBind/markbind/pull/1858) |
+| 11 | Reviewed PR: [Improve existing GitHub issue templates #1860](https://github.com/MarkBind/markbind/pull/1860) |
+| 11 | Merged PR: [Report broken links only once #1819](https://github.com/MarkBind/markbind/issues/1819) |
+| 11 | Submitted issue: [Use of "html" and "HTML" in docs #1867](https://github.com/MarkBind/markbind/issues/1867) |
