@@ -41,4 +41,10 @@
 | 10 | Reviewed PR: [Selective Deadline Extensions - Frontend tables and modals #11603](https://github.com/TEAMMATES/teammates/pull/11603) |
 | 10 | Reviewed PR: [Selective Deadline Extensions - Integrate the backend #11671](https://github.com/TEAMMATES/teammates/pull/11671) |
 | 10 | Reviewed PR: [Minor fixes for angular.json and typos #11672](https://github.com/TEAMMATES/teammates/pull/11672) |
-| 11 | Authored PR (awaiting review): [Add ESLint rule for member delimiter style #11675](https://github.com/TEAMMATES/teammates/pull/11675) |
+| 11 | Submitted Issue: [Fix minor typos in comments #11684](https://github.com/TEAMMATES/teammates/issues/11684) |
+| 11 | Authored PR (merged): [Add ESLint rule for member delimiter style #11675](https://github.com/TEAMMATES/teammates/pull/11675) |
+| 11 | Authored PR (awaiting review): [Fix E2E Tests (Firefox) Failing Consistently #11686](https://github.com/TEAMMATES/teammates/pull/11686) |
+| 11 | Authored PR (final review): [Fix minor typos #11685](https://github.com/TEAMMATES/teammates/pull/11685) |
+| 11 | Reviewed PR: [Use course institute fully for displays + to determine whether account can create course #11654](https://github.com/TEAMMATES/teammates/pull/11654) |
+| 11 | Reviewed PR: [Cascade user updates/deletes to deadline maps #11688](https://github.com/TEAMMATES/teammates/pull/11688) |
+| 11 | Reviewed PR: [Add selective deadlines into access control checks #11689](https://github.com/TEAMMATES/teammates/pull/11689) |

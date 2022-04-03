@@ -72,7 +72,7 @@ Resources:
 * [Difference Between 'assume-unchanged' and 'skip-worktree'](https://stackoverflow.com/questions/13630849/git-difference-between-assume-unchanged-and-skip-worktree)
 * [Summarised table comparison](https://fallengamer.livejournal.com/93321.html)
 
-### npm Dependency Versions
+### npm Dependencies
 
 While updating package.json, I had to clarify the meaning of some versioning syntaxes:
 
@@ -80,8 +80,49 @@ While updating package.json, I had to clarify the meaning of some versioning syn
 * `^1.2.3` means "compatible with v1.2.3" => accepts all future minor/patch versions, i.e. ≥1.2.3 and <2.0.0
 * `@org/package` => 'org' is a scope, and 'package' is a package name within the scope
 
+Some learning points on the different types of dependencies:
+
+* **devDependencies** - only required during development (e.g. external tests, documentation)
+  * installed on `npm install`, unless the `--production` flag is passed
+* **peerDependencies** - compatible with, but not required (e.g. the module may expose a specific interface specified by the host documentation)
+  * installed if missing, unless there is a dependency conflict
+* **bundledDependencies** - will be bundled when publishing the package
+  * Can be specified as a boolean or an array of strings (package names). `true` will bundle all dependencies, `false` will bundle none and an array of package names specifies which packages to bundle.
+
 Resources: 
 
 * [Specifying version ranges for dependencies](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#dependencies)
 * [Scope](https://docs.npmjs.com/cli/v8/using-npm/scope)
+* [devDependencies, peerDependencies, bundledDependencies](https://docs.npmjs.com/cli/v8/configuring-npm/package-json#devdependencies)
+* [Explanation on different types of dependencies](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies)
+* [When to use bundled dependencies](https://stackoverflow.com/questions/11207638/advantages-of-bundleddependencies-over-normal-dependencies-in-npm?lq=1)
+
+### Simple scripting
+
+Bash scripting was very useful when I needed to modify a large number of files (like `vue.min.js` for upgrading the Vue version, or `bootstrap.min.*` for upgrading Bootstrap). 
+I picked up a bit of bash scripting and used this to mass copy the minified files:
+
+```bash
+find . -name "*vue.min.js" | xargs -n 1 cp ~/Downloads/vue.min.js
+```
+
+* `find . -name "*vue.min.js"` finds all filepaths ending with `vue.min.js`
+* `|` uses the output of `find . -name "*vue.min.js"` as input for the right side
+  * `|` is called a **pipe**. 
+  * Redirects the left-hand side stdout to stdin of the right-hand side
+* `xargs -n 1` converts each line of input to arguments for the command `cp ~/Downloads/vue.min.js`
+  * `xargs` converts input from stdin to arguments for a command.
+  * `-n 1` means to use only one argument for each iteration. Since arguments are space-separated, this essentially breaks the input up by lines
+  * `-p` can be used to echo each command iteration and prompt a confirmating before proceeding. (`y` to confirm)
+
+Another helpful command: using `sed`, delete all lines containing 'bootstrap-vue' in HTML files
+
+```bash
+find . -name "*.html" | sed -i '' '/bootstrap-vue/d'
+find . -name "*bootstrap-vue.min.css" | xargs -n1 rm
+```
+
+Resources
+* [Linux commands: `xargs`](https://flaviocopes.com/linux-command-xargs/)
+* [Using sed: How to delete all lines containing a string](https://stackoverflow.com/questions/5410757/how-to-delete-from-a-text-file-all-lines-that-contain-a-specific-string)
 

@@ -1,18 +1,3 @@
-## IntelliJ Tools
-### Inspect Code
-the Inspect Code tool allows IntelliJ to look for common code quality issues such as 
-- Declaration redundancy
-- Probable bugs
-- Proofreading
-
-Limitations:
-- A full run of the code cleanup takes a long time to complete. A run on RepoSense itself takes ~10 minutes.
-This can be cut significantly shorter if we ignore the proofreading checks which cuts it down to 30 seconds.
-- 'Unused' (as declared by IntelliJ) fields might not be redundant such as in [`SummaryJson.java`](https://github.com/reposense/RepoSense/blob/master/src/main/java/reposense/report/SummaryJson.java) where the fields are necessary for conversion to a JSON file.
-- 'Unused' methods are sometimes necessary for other tools such as JavaBeans (requires setters and getters) and JavaFX (@FXML methods are not detected as 'used')
-
-Thus, we should still exercise discretion in using this tool even if it is something as simple as removing unused variables or methods.
-
 ## FileSystems
 ### Specifying File Paths in Command Line Arguments 
 General:
@@ -34,6 +19,7 @@ replaced with \ as per Microsoft's [documentation](https://docs.microsoft.com/en
 - Both `./` and `../` function similarly in both UNIX and Windows (replacing `/` with \\).
 - `~` is an absolute pathing feature used in [Bash](https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html#Tilde-Expansion) which expands to the
 user's home directory.
+  - If tilde expansion is used as follows: `~chan-jd/"some file path"/` then `~chan-jd` is expanded to the `$HOME` directory of the user `chan-jd`.
   - If wrapped within quotation marks, it becomes a literal `~` char in the file path. Thus, to use both together, 
   the tilde has to be left out of the quotation marks: `~/"some test file"`.
   - `~` does not work in Windows command prompt but does work in Windows PowerShell
@@ -60,12 +46,12 @@ user's home directory.
   - They will linger so long as the deployment on the environment continues to exist and would normally require manual deletion.
 - [Deployments](https://docs.github.com/en/rest/reference/deployments) are requests to deploy a specific version of the repo such as a pending pull request. In the context of RepoSense, a single PR can have several tens of deployments if it is consistently updated.
   - It is generally difficult to track and control deployments on the GitHub page itself.
-  - However, through the GitHub API, we can query all deployments relating to an environment and deleting them. This will automatically remove the environment from the listing as well. This solution was taken from this [stackoverflow post](https://stackoverflow.com/a/61272173).
+  - However, through the GitHub API, we can query all deployments relating to an environment and delete them. This will automatically remove the environment from the listing as well. This solution was taken from this [stackoverflow post](https://stackoverflow.com/a/61272173).
 
 ### GitHub API
 The GitHub API provides us with a way to interact with repositories via a RESTful API. Using `curl` commands:
-- We are able to query (via GET) for information such as branches, deployments and environments
-- We are also able to POST commands to a repository to perform various actions such as deleting deployments. These generally require a security token which might not be available from a personal computer's CLI. When running GitHub Actions, it is possible to acquire one for the repository to perform actions such as closing deployments.
+- We are able to query (via `GET`) for information such as branches, deployments and environments
+- We are also able to `POST` commands to a repository to perform various actions such as deleting deployments. These generally require a security token which might not be available from a personal computer's CLI. When running GitHub Actions, it is possible to acquire one for the repository to perform actions such as closing deployments.
 
 ### GitHub Actions
 We must add GitHub action workflow files to the directory `.github/workflows` in order to automatically perform certain scripts on certain GitHub actions.
@@ -75,20 +61,20 @@ We must add GitHub action workflow files to the directory `.github/workflows` in
 
 ## Git Specifications:
 ### Git Diff Output
-The `git diff` command is used heavily by RepoSense for analyzing. The following are behaviour in the output that I learnt:
+The `git diff` command is used heavily by RepoSense for analyzing. The following are behaviour in the output that I discovered from self-testing as documentation about the behaviour was difficult to find:
 - The filename `/dev/null` represents a non-existent file. A mapping from `/dev/null` to a file indicates a new file.
   Similarly, a mapping from a file to `/dev/null` indicates a deleted file.
-- For filenames containing certain special characters, the listing of filenames in the before-after comparison is adjusted slightly.
-  (I.e. the lines `--- a/some/file/name` or `+++ b/some/file/name`).
+- For filenames containing certain special characters (i.e. the lines `--- a/some/file/name` or `+++ b/some/file/name`), the listing of filenames in the before-after comparison is adjusted slightly.
+  
   - For files containing spaces, the filename will have a tab character at the end. E.g. `+++ b/space test\t`.
-  - For files containing special characters (not including space) such as `\`, `"`, `\t`, the filename will be placed in quotation marks. E.g. `+++ "b/tab\\ttest/"`
+  - For files containing special characters (not including space) such as \\, `"`, `\t`, the filename will be placed in quotation marks. E.g. `+++ "b/tab\\ttest/"`
   - For files containing both of the above cases, the filename is first wrapped in double quotation marks followed by a tab character.
 - These nuances in `git diff` filename output may be important for filename designation as is done in RepoSense.
 
 ### Git Log Output
 Every commit in the log output displays the hash, author with email, date and message.
 - If a user has set an email in their `git config` but set their Github 'keep my email address private' setting to true, web-based Git operations will list their email as `username@users.noreply.github.com`.
-- However, it is possible to explicitly set the email to be empty through `git config --global user.email \<\>` which will set it to `<>`. u 
+- It is possible to explicitly set the email to be empty through `git config --global user.email \<\>` which will set it to `<>`. No email will show up in a commit done by such a user config. 
 
 ### Git Commit & Config Interaction
 `git commit` commit information details can be found [here](https://git-scm.com/docs/git-commit#_commit_information).
@@ -96,6 +82,18 @@ Every commit in the log output displays the hash, author with email, date and me
   - However, committing with an empty email `<>` will cause the commit to look like [this on GitHub](https://github.com/reposense/testrepo-Alpha/commit/2536b8e0de3366989f4b124b9a5a613db010379e) where there is no account linked to it.
 - It is possible temporarily set `user.name` as `<>`. However, it will not allow the user to commit, citing an invalid username.
   - It is also possible to set `user.name` as an empty string which is equivalent to resetting it. Git will not allow commits until a `user.name` has been set.
+
+### Git Changelogs
+This section refers specifically to the changes to the `Git` tool itself. I have found out first-hand that finding information relating to `Git` versions can be difficult as most results relate to how `Git` can be used to manage those versions.
+- The release notes can be found at https://github.com/git/git/tree/master/Documentation/RelNotes
+- One (rather inefficient) way I have found to attempt to search for relevant information regarding when a specific change was made was to do the following:
+  1. Clone the `git` repository locally (Note the repository is quite large)
+  2. Create a bash script that takes in a string from the command line and `grep`-es it against all the text files in the folder `Documentation/RelNotes`
+  - Queries are generally quite fast. For example, if I wanted to find out when the `git blame --ignore-revs-file` flag was added, I could search for `git blame` and see all relevant release notes and look them up manually. 
+  - `grep` can be set to quiet mode if I'm just looking for the file containing the reference. Otherwise, in non-quiet mode, the line in which the string match is found is printed. I can read the line and see if it is directly related to what I am looking for without having to look-up the file myself.
+- Descriptions of the changes can be somewhat vague. It is usually easier to look for the specific command and see if it showed up in the specific release notes rather than trying to find keywords relating to the change in mind.
+  - For example the `ignore-revs-list` flag addition was done in 2.23.0. The release notes reads `"git blame" learned to "ignore" commits in the history, ...`.
+  - For full details on the change, we need to go to the commit message itself. The commit messages are extremely detailed, e.g. `git blame --ignore-revs-file` commit can be found [here](https://github.com/git/git/commit/ae3f36dea16e51041c56ba9ed6b38380c8421816).
 
 ## Javascript/Vue.js
 New language for me, no prior experience. Learnt how to read and interpret most of the lines of Javascript in RepoSense.
@@ -118,6 +116,28 @@ Interacting with objects on a webpage:
 - In conjunction with the `href` property, there is the `target` property which designates where the hyperlink will be opened.
   - Most commonly used in RepoSense is `target="_blank"` which means to open a new window or tab.
   - There are other alternatives such as `_self` for opening in the same frame, `_parent` and `_top`.
+
+## Regular Expressions
+Java provides extensive support for Regex matching via the `Pattern` and `Matcher` classes which facilitate string parsing. 
+- [`Pattern`](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html) is Java's class for handling various regex pattern.
+  - The API provides a list of all the recognised syntax. In particular, I would like to go over the different quantifier types as I believe they are quite important for anyone who wants to build complex regex patterns. 
+  - `Greedy quantifiers` - what we see the most often: `x?`, `x*`, `x+`.
+    - These will always try to be met if possible. They take precedence over `Reluctant quantifiers`.
+  - `Reluctant quantifiers` - e.g. `x??`, `x*?`, `x+?`.
+    - These matched only if it is required for the regex to fully match. 
+    - For example, matching `(?<greedy>.*)(?<reluctant>.*)` on the string `Example word` will result in `greedy = Example word` and `reluctant = ""`;
+  - `Possessive quantifiers` - e.g. `x?+`, `x*+`, `x++`.
+    - When Java does the matching from left to right, these quantifiers will be matched first. Once Java reaches the end of the line, it actually does backtracking to see if some greedy/reluctant quantifiers can give up some characters for the regex to match.
+    - However, possessive quantifiers will never give up their characters on backtrack even if it means that the matcher would otherwise have matched. 
+    - Possessive quantifiers should be used carefully. However, their behaviour is more straightforward and easy to understand.
+- [`Matcher`](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html)
+  - We can perform `Pattern p = ...; p.matcher("some String")` to obtain a `Matcher` object. Most of the information that we want can be obtained from this object.
+  - However, there are some points to be noted about the implementation of the `Matcher` object in Java.
+    - `Matcher` objects (as of Java 11) are initially just a mutable container containing the regex and the String. Matching logic has not yet been performed.
+    - Suppose we have named groups within our regex pattern. We have to run a `matches` or `find` method for the groups to be queried. Otherwise, we will keep getting an `IllegalStateException`. 
+      - The methods like `matches` and `find` mutate the `Matcher` object. 
+
+Regex testing can be particularly cumbersome, slow and difficult to grasp why the regex is behaving the way it is. I personally found this website [regex101](https://regex101.com/) which allows convenient testing of various regex patterns on different inputs. It also supports regex testing for different languages.
 
 ## Others
 ### "file" URI Scheme
@@ -145,3 +165,24 @@ cURL is a command-line tool to transfer data to or from a server using support p
 - Popular remote repository domains besides GitHub include sites like GitLab and BitBucket
   - Interacting with these are nearly identical to interacting with GitHub, with `https` and `ssh` options to clone a repository.
   - Relevant to RepoSense: the paths to commits and other features are usually different between the sites. For RepoSense to support all these websites, it'll have to take into account the differences in the path to these resources on the website.
+  
+### IntelliJ Inspect Code
+The Inspect Code tool allows IntelliJ to look for common code quality issues such as
+- Declaration redundancy
+- Probable bugs
+- Proofreading
+
+Limitations:
+- A full run of the code cleanup takes a long time to complete. A run on RepoSense itself takes ~10 minutes.
+  This can be cut significantly shorter if we ignore the proofreading checks which cuts it down to 30 seconds.
+- 'Unused' (as declared by IntelliJ) fields might not be redundant such as in [`SummaryJson.java`](https://github.com/reposense/RepoSense/blob/master/src/main/java/reposense/report/SummaryJson.java) where the fields are necessary for conversion to a JSON file.
+- 'Unused' methods are sometimes necessary for other tools such as JavaBeans (requires setters and getters) and JavaFX (@FXML methods are not detected as 'used')
+
+Thus, we should still exercise discretion in using this tool even if it is something as simple as removing unused variables or methods.
+
+### Checkstyle
+Gathered some knowledge while reviewing related PRs and doing some testing.
+- It seems that indentation enforcement is quite buggy for `checkstyle` as can be seen in this [issue](https://github.com/checkstyle/checkstyle/issues/5448) and several others raised at a later date.
+- There is an option to `forceStrictCondition` which strictly enforces some number of spaces indentation for all children lines, even if there are children-of-children-lines which we would normally add a new level of indentation.
+  - One way to get around it is to not use `forceStrictCondition`. The limitation is that the indentation checks then become the minimum number of spaces required. The actual number of spaces used can be arbitrarily large. 
+
