@@ -51,3 +51,5 @@
 | 11 | Reviewed PR: [Add selective deadlines into access control checks #11689](https://github.com/TEAMMATES/teammates/pull/11689) |
 | 11 | Reviewed PR: [MarkBind website #11680](https://github.com/TEAMMATES/teammates/pull/11680) |
 | 11 | Reviewed PR: [Support running client scripts via Gradle #11605](https://github.com/TEAMMATES/teammates/pull/11605) |
+| 12 | Authored PR: [Selective deadline extension: E2E Tests #11709](https://github.com/TEAMMATES/teammates/pull/11709) |
+| 12 | Authored PR: [Selective deadline extensions: resolve backend issues #11712](https://github.com/TEAMMATES/teammates/pull/11712) |
