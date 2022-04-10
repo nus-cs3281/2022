@@ -18,8 +18,8 @@ Resources:
 - [Property Binding](https://angular.io/guide/property-binding)
 - [Event Binding](https://angular.io/guide/event-binding)
 - [Structural Directives](https://angular.io/guide/structural-directives)
-- [<ng-container>]https://angular.io/api/core/ng-container)
-- [<ng-template>](https://angular.io/api/core/ng-template)
+- [ng-container]https://angular.io/api/core/ng-container)
+- [ng-template](https://angular.io/api/core/ng-template)
 
 ### RxJS
 
