@@ -50,6 +50,9 @@
 | 11 | Reviewed PR: [Add selective deadlines into access control checks #11689](https://github.com/TEAMMATES/teammates/pull/11689) |
 | 11 | Reviewed PR: [MarkBind website #11680](https://github.com/TEAMMATES/teammates/pull/11680) |
 | 11 | Reviewed PR: [Support running client scripts via Gradle #11605](https://github.com/TEAMMATES/teammates/pull/11605) |
+| 12 | Submitted Issue: [Broken link in acknowledgements section #11717](https://github.com/TEAMMATES/teammates/issues/11717) |
 | 12 | Authored PR (awaiting review): [Selective deadline extension: E2E Tests #11709](https://github.com/TEAMMATES/teammates/pull/11709) |
 | 12 | Authored PR (merged): [Fix E2E Tests (Firefox) Failing Consistently #11686](https://github.com/TEAMMATES/teammates/pull/11686) |
 | 12 | Authored PR (merged): [Selective deadline extensions: resolve backend issues #11712](https://github.com/TEAMMATES/teammates/pull/11712) |
+| 12 | Authored PR (merged): [Selective Deadline Extension - Error in getting deadline extension entities possibly needing closing email #11716](https://github.com/TEAMMATES/teammates/pull/11716) |
+| 12 | Reviewed PR: [Instructor Help Page: Outdated search bar documentation #11713](https://github.com/TEAMMATES/teammates/pull/11713) |
