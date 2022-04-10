@@ -39,3 +39,8 @@
 | 11 | Reviewed PR : [Release Logger resources #1747](https://github.com/reposense/RepoSense/pull/1747) |
 | 11 | Responded to contributor queries : [Issue #1743](https://github.com/reposense/RepoSense/issues/1743) |
 | 11 | Opened issue : [Frontend follow-up tasks relating to #1647](https://github.com/reposense/RepoSense/issues/1748) |
+| 12 | Opened PR : [Lazy loading for code segments in authorship view #1750](https://github.com/reposense/RepoSense/pull/1750) |
+| 12 | Reviewed PR : [[Gradle] Update plugins #1744](https://github.com/reposense/RepoSense/pull/1744) |
+| 12 | Opened Issue : [Windows CI consistently slower than on other systems #1751](https://github.com/reposense/RepoSense/issues/1751) |
+| 12 | Reviewed PR : [[#1739] Add schema for json data files](https://github.com/reposense/RepoSense/pull/1740) |
+| 12 | Opened Issue : [Refactoring processLine in RepoConfigCsvParser class #1753](https://github.com/reposense/RepoSense/issues/1753) |

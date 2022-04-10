@@ -47,4 +47,7 @@
 | 11   | Reviewed PR: [[#231] Modify local repository URL to the correct remote repository #1679](https://github.com/reposense/RepoSense/pull/1679#pullrequestreview-929548937)                                                                                                                                |
 | 11   | Merged PR: [[#1728] GitVersion: Fix insufficient Git version build failure #1729](https://github.com/reposense/RepoSense/pull/1729)                                                                                                                                                                   |
 | 11   | Merged PR: [[#1572] Accept different types of URLs besides https github #1644](https://github.com/reposense/RepoSense/pull/1644)                                                                                                                                                                      |
+| 12   | Reviewed PR: [[#1630] Reorder Gradle Tasks and Dependencies #1631](https://github.com/reposense/RepoSense/pull/1631#pullrequestreview-930473032) |
+| 12   | Reviewed PR: [[#1504] Introduce file size limit to prevent large reports crashing #1647](https://github.com/reposense/RepoSense/pull/1647#pullrequestreview-930569902) |
+| 12   | Reviewed PR: [Housekeeping - Fix indentations #1692](https://github.com/reposense/RepoSense/pull/1692#pullrequestreview-937078930) |
 
