@@ -29,3 +29,6 @@
 | 10 | Merged PR: [Missing javadoc for functions #1650](https://github.com/reposense/RepoSense/pull/1650) |
 | 10 | Merged PR: [Upgrade Node.js to 14 #1714](https://github.com/reposense/RepoSense/pull/1714) |
 | 10 | Merged PR: [Upgrade to JUnit 5 #1705](https://github.com/reposense/RepoSense/pull/1705) |
+| 12 | Reviewed PR: [Introduce file size limit to prevent large reports crashing #1647](https://github.com/reposense/RepoSense/pull/1647) |
+| 12 | Reviewed PR: [Refactor GitClone::clone method #1749](https://github.com/reposense/RepoSense/pull/1749) |
+
