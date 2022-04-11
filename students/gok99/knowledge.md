@@ -39,6 +39,12 @@ Git exploded in popularity in large part due to Git hosting providers like GitHu
 
 For example, Bitbucket uses the term 'annotate' instead of 'blame' because the word 'blame' is insufficiently postive.
 
+### Triangular Git workflows
+
+In investigating the output of `git remote -v`, I noticed there were 2 remotes (fetch and push) for each remote name, which I was confused by. The utility of the separation of fetch and push remotes is for triangular workflows. 
+
+We are probably familiar with the common workflow for updating a branch on a forked repo which involves first pulling updates from upstream master, then making changes and pushing to our own fork. This requires remembering to fetch and push to separate repos. With triangular workflows, you can have fetch and push apply to separate repos but with the same remote name, which makes this process much more convenient.
+
 ### Cypress Tests
 
 Cypress is a frontend testing tool for testing applications that run in the browser, with tests that are easy to read and write. It uses browser automation (similar to Selenium) and comes with a browser and relevant dependencies out of the box, so it's very easy to set-up. Cypress also provides a dashboard for convenient monitoring of test runs. 
@@ -63,3 +69,4 @@ There are a lot of these, and most just remain quirks but some result in actual 
 * The command line tool [GitHub cli](https://github.com/cli/cli) provides a very handy way to access GitHub API, and has been useful for checking out PRs, interacting with issues, managing workflows, etc right from the command line.
 * `git bisect` is a very nice way to find problematic commits. Given a bad commit and a previously good commit, `git bisect` does a binary search (either automatically with a test or with manual intervention) to find the problematic commit where the issue was introduced.
 * Search through previously run commands (with the first few characters) with ctrl-r in a bash shell.
+* GitHub issues and PRs have advanced search syntax like `involves:USER` for all items that involves a user. This was very useful for updating `progress.md`. More features [here](https://docs.github.com/en/search-github/searching-on-github/searching-issues-and-pull-requests).

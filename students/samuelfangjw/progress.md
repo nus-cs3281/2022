@@ -43,8 +43,16 @@
 | 10 | Reviewed PR: [Minor fixes for angular.json and typos #11672](https://github.com/TEAMMATES/teammates/pull/11672) |
 | 11 | Submitted Issue: [Fix minor typos in comments #11684](https://github.com/TEAMMATES/teammates/issues/11684) |
 | 11 | Authored PR (merged): [Add ESLint rule for member delimiter style #11675](https://github.com/TEAMMATES/teammates/pull/11675) |
-| 11 | Authored PR (awaiting review): [Fix E2E Tests (Firefox) Failing Consistently #11686](https://github.com/TEAMMATES/teammates/pull/11686) |
-| 11 | Authored PR (final review): [Fix minor typos #11685](https://github.com/TEAMMATES/teammates/pull/11685) |
+| 11 | Authored PR (merged): [Fix minor typos #11685](https://github.com/TEAMMATES/teammates/pull/11685) |
+| 11 | Authored PR (merged): [Student submitting MCQ question: comments are not loading #11699](https://github.com/TEAMMATES/teammates/pull/11699) |
 | 11 | Reviewed PR: [Use course institute fully for displays + to determine whether account can create course #11654](https://github.com/TEAMMATES/teammates/pull/11654) |
 | 11 | Reviewed PR: [Cascade user updates/deletes to deadline maps #11688](https://github.com/TEAMMATES/teammates/pull/11688) |
 | 11 | Reviewed PR: [Add selective deadlines into access control checks #11689](https://github.com/TEAMMATES/teammates/pull/11689) |
+| 11 | Reviewed PR: [MarkBind website #11680](https://github.com/TEAMMATES/teammates/pull/11680) |
+| 11 | Reviewed PR: [Support running client scripts via Gradle #11605](https://github.com/TEAMMATES/teammates/pull/11605) |
+| 12 | Submitted Issue: [Broken link in acknowledgements section #11717](https://github.com/TEAMMATES/teammates/issues/11717) |
+| 12 | Authored PR (awaiting review): [Selective deadline extension: E2E Tests #11709](https://github.com/TEAMMATES/teammates/pull/11709) |
+| 12 | Authored PR (merged): [Fix E2E Tests (Firefox) Failing Consistently #11686](https://github.com/TEAMMATES/teammates/pull/11686) |
+| 12 | Authored PR (merged): [Selective deadline extensions: resolve backend issues #11712](https://github.com/TEAMMATES/teammates/pull/11712) |
+| 12 | Authored PR (merged): [Selective Deadline Extension - Error in getting deadline extension entities possibly needing closing email #11716](https://github.com/TEAMMATES/teammates/pull/11716) |
+| 12 | Reviewed PR: [Instructor Help Page: Outdated search bar documentation #11713](https://github.com/TEAMMATES/teammates/pull/11713) |

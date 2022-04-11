@@ -1,4 +1,4 @@
-## FileSystems
+## FileSystems, Bash and CMD
 ### Specifying File Paths in Command Line Arguments 
 General:
 - File path arguments should nearly always be wrapped in quotation marks to accommodate file paths containing spaces. 
@@ -38,7 +38,14 @@ user's home directory.
     - For `'`, replace it with `'"'"'`. Consecutive quoted strings not separated by spaces are treated as a single argument in Bash. This quotes the single quote in double quotes where it does not have special meaning.
 - A (possibly incomplete) list of special characters in Bash that need to be escaped can be found in this [stackexchange post](https://unix.stackexchange.com/questions/347332/what-characters-need-to-be-escaped-in-files-without-quotes).
 - _Relevant note_: On Windows CMD, the `'` single quote has no special meaning and cannot be used to quote arguments in CMD. Only double quotes works for arguments containing spaces to be treated as a single argument.
- 
+
+### Variable and tilde expansion in CMD and Bash
+When we run something like `java -jar RepoSense.jar some cli args`, variable expansion and tilde expansion (for Bash) is performed for us before the Java program receives it.
+- E.g. If I specify my repository as `~/reposense/Reposense`, the `main` method in the Java program will receive the String `/chan-jd/home/reposense/Reposense` in its `args` array.
+- This behaviour is mostly beneficial for us but can cause some non-uniform program behaviour when user has more than one way to specify their arguments. An example relevant to RepoSense is that users can specify their local repository file paths in both the command line or the `repo-config.csv` file.
+  But when RepoSense reads the data straight from the CSV file, it does not perform the necessary expansions. Using the example above, `RepoSense` will receive the raw version of the String, `~/reposense/Reposense` instead which might cause some issues.
+- One possible way to work around this is to `echo` the command in CMD or Bash. The command output will include the substituted expansions.
+
 ## GitHub
 ### Deployments and Environments
 - [Environments](https://docs.github.com/en/rest/reference/deployments#environments) can be viewed as the platform for which deployments are staged. There are generally fewer of them. For example in RepoSense, there is roughly two environments per active pull request for deployments.
@@ -84,7 +91,7 @@ Every commit in the log output displays the hash, author with email, date and me
   - It is also possible to set `user.name` as an empty string which is equivalent to resetting it. Git will not allow commits until a `user.name` has been set.
 
 ### Git Changelogs
-This section refers specifically to the changes to the `Git` tool itself. I have found out first-hand that finding information relating to `Git` versions can be difficult as most results relate to how `Git` can be used to manage those versions.
+This section refers specifically to the changes to the `Git` tool itself. I have found out from my own experience that finding information relating to `Git` versions can be difficult as most search results relate to how `Git` can be used to manage those versions.
 - The release notes can be found at https://github.com/git/git/tree/master/Documentation/RelNotes
 - One (rather inefficient) way I have found to attempt to search for relevant information regarding when a specific change was made was to do the following:
   1. Clone the `git` repository locally (Note the repository is quite large)
@@ -185,4 +192,33 @@ Gathered some knowledge while reviewing related PRs and doing some testing.
 - It seems that indentation enforcement is quite buggy for `checkstyle` as can be seen in this [issue](https://github.com/checkstyle/checkstyle/issues/5448) and several others raised at a later date.
 - There is an option to `forceStrictCondition` which strictly enforces some number of spaces indentation for all children lines, even if there are children-of-children-lines which we would normally add a new level of indentation.
   - One way to get around it is to not use `forceStrictCondition`. The limitation is that the indentation checks then become the minimum number of spaces required. The actual number of spaces used can be arbitrarily large. 
+
+### File locks
+When Java opens a file for writing, it obtains a file lock in the form of `filename.extension.lck` with `lck` standing for lock. 
+This serves to support mutual exclusion for access to writing to the file. This appears in RepoSense when loggers attempt to write to the log file in which case, some kind of mutual exclusion gurantee is required.
+- Notably, file locks (and other process resources) are released when the main Java process `exits()`. 
+- However, in some scenarios when the program does not exit properly, the `.lck` file might be left behind. This can potentially cause issues in attempting to delete directories containing such an `.lck` file.
+  - Suggested by this [stackoverflow post](https://stackoverflow.com/questions/12849138/close-log-files/22957009#22957009), one way to easily release all log resources at the end of Java execution is to use `LogManager.getLogManager().reset()` which immediately releases all resources.
+
+### Checkstyle
+Their GitHub repository can be found [here](https://github.com/checkstyle/checkstyle) where we can view the features they are working on and bugs that other people are experiencing. 
+- In particular, there is a rather strange bug relating to `forceStrictCondition` which is not able to properly detect parent lines of nested line wrapppings.
+  - The relevant issues can be found in [Issue #6024](https://github.com/checkstyle/checkstyle/issues/6024) and [Issue #6020](https://github.com/checkstyle/checkstyle/issues/6020)
+- The above issues result in some somewhat strange enforcements, for example (taken from #6024), the code below has violations though it is what we expect the indentations to be
+
+```
+Arrays.asList(true,
+        Arrays.asList(true,
+                true, //violation
+                true));  //violation
+```
+- While the same line of code below is what passes the checkstyle but has unusual indentation.
+```
+Arrays.asList(true,
+        Arrays.asList(true,
+        true, // no violation, but should be
+        true));  // no violation, but should be
+```
+- There appears to be quite a distinct tradeoff here as without `forceStrictCondition`, checkstyle only enforces the minimum required indentation level. A user's indentation can be as large as they desire so long as it does not exceed the line character limit.
+  - However, if we were to `forceStrictCondition`, then for nested line wrappings, the indentation being enforced can be somewhat strange.
 
