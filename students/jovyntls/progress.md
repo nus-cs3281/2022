@@ -32,3 +32,11 @@
 | 11 | Reviewed PR: [Improve existing GitHub issue templates #1860](https://github.com/MarkBind/markbind/pull/1860) |
 | 11 | Merged PR: [Report broken links only once #1819](https://github.com/MarkBind/markbind/issues/1819) |
 | 11 | Submitted issue: [Use of "html" and "HTML" in docs #1867](https://github.com/MarkBind/markbind/issues/1867) |
+| 11 | Merged PR: [Migrate popovers and tooltips to floating-vue #1856](https://github.com/MarkBind/markbind/pull/1856) - later re-opened and edited as #1868 |
+| 12 | Reviewed PR: [Add an explanation on how to use JavaScript chart libraries in MarkBind #1872](https://github.com/MarkBind/markbind/pull/1872) |
+| 12 | Reviewed PR: [Fix edge cases of link validation and conversion #1875](https://github.com/MarkBind/markbind/pull/1875) |
+| 12 | Reviewed PR: [Fix UG display issues when using the outputBox boilerplate #1889](https://github.com/MarkBind/markbind/pull/1889) |
+| 12 | Merged PR: [Migrate popovers and tooltips to floating-vue #1868](https://github.com/MarkBind/markbind/pull/1868) - continuation of #1856 |
+| 12 | Merged PR: [Add Components page to developer guide #1865](https://github.com/MarkBind/markbind/pull/1865) |
+| 12 | Merged PR: [Remove bootstrap-vue #1873](https://github.com/MarkBind/markbind/pull/1873) |
+| 12 | Discussion on issues: [#1027](https://github.com/MarkBind/markbind/issues/1027) |
