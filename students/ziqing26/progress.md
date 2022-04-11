@@ -12,9 +12,13 @@
 | 9 | Reviewed PR: [Add delete notification route #11650](https://github.com/TEAMMATES/teammates/pull/11650) |
 | 9 | Reviewed PR: [Notification feature - Database Test #11651](https://github.com/TEAMMATES/teammates/pull/11651) |
 | 9 | Reviewed PR: [Notification feature - admin page delete notification function #11652](https://github.com/TEAMMATES/teammates/pull/11652) |
-| 9 | On hold PR due to change in milestone plan: [Add mark as read to notification GET API #11661](https://github.com/TEAMMATES/teammates/pull/11661) |
-| 9 | On hold PR due to change in milestone plan: [Notification feature: POST API for mark as read in account #11664](https://github.com/TEAMMATES/teammates/pull/11664#) |
-| 10 | Merged PR:[Notification: GET API test and access control #11648](https://github.com/TEAMMATES/teammates/pull/11648) |
+| 10 | Merged PR: [Notification: GET API test and access control #11648](https://github.com/TEAMMATES/teammates/pull/11648) |
 | 11 | Reviewed PR: [Notification feature - Admin page update (edit) feature #11663](https://github.com/TEAMMATES/teammates/pull/11663)
 | 11 | Reviewed PR: [Notification feature - Rename type to style #11676](https://github.com/TEAMMATES/teammates/pull/11676) |
-| 11 | Reviewed PR: [Usage statistics page for maintainers #11691](https://github.com/TEAMMATES/teammates/pull/11691)
+| 11 | Reviewed PR: [Usage statistics page for maintainers #11691](https://github.com/TEAMMATES/teammates/pull/11691) |
+| 11 | Reviewed PR: [Notification Feature - E2E tests for admin features #11695](https://github.com/TEAMMATES/teammates/pull/11695) |
+| 12 | Reviewed PR: [Notification feature - Add tests PUT and DELETE route #11701](https://github.com/TEAMMATES/teammates/pull/11701)
+| 12 | Merged PR: [Notification Feature - Notification Logic Tests #11696](https://github.com/TEAMMATES/teammates/pull/11696) |
+| 12 | Merged PR: [Notification feature: Frontend test for admin features #11678](https://github.com/TEAMMATES/teammates/pull/11678) |
+| 12 | Authored PR: [Add mark as read to notification GET API #11661](https://github.com/TEAMMATES/teammates/pull/11661) |
+| 12 | Authored PR: [Notification feature: POST API for mark as read in account #11664](https://github.com/TEAMMATES/teammates/pull/11664#) |

@@ -40,15 +40,6 @@ Resources:
 
 [d3 Tutorials](https://observablehq.com/@d3/learn-d3)
 
-## Jest
-
-1. `jest.spyOn(object, methodName)` allows tracking calls to `object[methodName]` and creating a mock function. The spied methods are useful for mock implementation of services in frontend testing.
-2. Snapshot testing renders a UI component, takes a snapshot and then compares it to a reference snapshot file stored together with the test. Snapshot testing is great when you want to validate the structure of something like a component or an object.
-
-Resources:
-
-[Jest Snapshot Testing documentation](https://jestjs.io/docs/snapshot-testing)
-
 ## OAuth2.0
 TEAMMATES staging and production server uses [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) for authorization.
 
@@ -73,7 +64,29 @@ Resources:
 ## Backend 
 ### Workflow
 As I built API for notification features, I learnt the backend workflow in TEAMMATES, from endpoint design, to access control and getActions, to execute the action, to use Logic and Db layers to create result. I learnt how to use Postman when designing API endpoints.
-### Testing
+
+## Testing
+
+### Frontend - Jest
+
+1. `jest.spyOn(object, methodName)` allows tracking calls to `object[methodName]` and creating a mock function. The spied methods are useful for mock implementation of services in frontend testing.
+2. Snapshot testing renders a UI component, takes a snapshot and then compares it to a reference snapshot file stored together with the test. Snapshot testing is great when you want to validate the structure of something like a component or an object.
+
+Resources:
+
+[Jest Snapshot Testing documentation](https://jestjs.io/docs/snapshot-testing)
+
+### Backend
 
 1. I learnt how to use `dataBundle` to create different instance of testing objects.
 2. Test Driven Development is helpful especially to catch bugs before fixing it.
+
+### E2E - Selenium, PageObject
+
+1. Selenium provides extensions for website test automation. `Selenium WebDriver` APIs identifies Web elements. WebDriver provides bindings which support classes. It has two-way communication with broswer through a driver (eg. ChromeDriver). WebDriver passes commands to Broswer through driver, while receives information back via the same route.
+
+2. Selenium helps identify web elements using locator strategies (e.g. class name, css selector, id, name or link text). `findElement` method will return the first element found in the context. `findElements` returns all elements matching a locator.
+
+3. Selenium helps interact with web elements. Basic commands are `click`, `send keys`, `clear`, `submit` and `select`. `select` could be useful to selection an `<option>` in a `<select>` element.
+
+4. PageObject design pattern is useful to model UI as objects in test code, reducing duplicated code. The public method in page object represents serivices that the page offers with proper abstraction. They return page objects. `PageFactory` package is used in TEAMMATES.
