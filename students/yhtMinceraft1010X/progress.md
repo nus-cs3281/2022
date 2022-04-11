@@ -31,4 +31,7 @@
 | 10 | Merged PR: [Upgrade to JUnit 5 #1705](https://github.com/reposense/RepoSense/pull/1705) |
 | 12 | Reviewed PR: [Introduce file size limit to prevent large reports crashing #1647](https://github.com/reposense/RepoSense/pull/1647) |
 | 12 | Reviewed PR: [Refactor GitClone::clone method #1749](https://github.com/reposense/RepoSense/pull/1749) |
+| 12 | Merged PR: [Gradle: update node and execfork plugins to newer versions #1744](https://github.com/reposense/RepoSense/pull/1744) |
+| 13 | Merged PR: [Rearrange Gradle tasks and their dependencies #1631](https://github.com/reposense/RepoSense/pull/1631) |
+| 13 | Merged PR: [DevOps: update uploading of coverage reports to Codecov #1735](https://github.com/reposense/RepoSense/pull/1735) |
 
