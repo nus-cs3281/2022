@@ -61,8 +61,7 @@ Resources:
 
 [Data Consistency in Datastore Queries](https://cloud.google.com/appengine/docs/standard/java/datastore/data-consistency)
 
-## Backend 
-### Workflow
+## Backend Workflow
 As I built API for notification features, I learnt the backend workflow in TEAMMATES, from endpoint design, to access control and getActions, to execute the action, to use Logic and Db layers to create result. I learnt how to use Postman when designing API endpoints.
 
 ## Testing
@@ -90,3 +89,14 @@ Resources:
 3. Selenium helps interact with web elements. Basic commands are `click`, `send keys`, `clear`, `submit` and `select`. `select` could be useful to selection an `<option>` in a `<select>` element.
 
 4. PageObject design pattern is useful to model UI as objects in test code, reducing duplicated code. The public method in page object represents serivices that the page offers with proper abstraction. They return page objects. `PageFactory` package is used in TEAMMATES.
+
+Resources:
+
+[Selenium Documenation](https://www.selenium.dev/documentation/)
+[PageObject by Martin Fowler](https://martinfowler.com/bliki/PageObject.html)
+
+## Non-technical knowledge
+
+1. It is important to communicate openly and professionaly so that everyone could sync up with each other.
+2. When releasing a feature, we might need to think of how to get the MVP done ASAP, so instead of working on everything simultaneously (i.e. both user facing features and admin features), sometimes it might be better to focus on getting one done thoroughly first.
+3. PR review requires strategy of concise and respectful communication. Writing reviewer friendly code is important to help them review more efficiently. It is also more preferred to make smaller PRs logically.
