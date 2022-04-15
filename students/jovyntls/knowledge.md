@@ -14,7 +14,7 @@ Resources
 
 ### Vue Templates & Slots 
 
-Templates/slots are a way to pass content from parent to child components, and are used by bootstrap-vue (in place of props) in cases that require reactivty.
+Templates/slots are a way to pass content from parent to child components, and are used by bootstrap-vue (in place of props) in cases that require reactivity.
 Using slots could make the code more readable. 
 It's also a convenient way to pass components into another component, and enables reactivity in the popover use case.
 
@@ -113,7 +113,7 @@ find . -name "*vue.min.js" | xargs -n 1 cp ~/Downloads/vue.min.js
 * `xargs -n 1` converts each line of input to arguments for the command `cp ~/Downloads/vue.min.js`
   * `xargs` converts input from stdin to arguments for a command.
   * `-n 1` means to use only one argument for each iteration. Since arguments are space-separated, this essentially breaks the input up by lines
-  * `-p` can be used to echo each command iteration and prompt a confirmating before proceeding. (`y` to confirm)
+  * `-p` can be used to echo each command iteration and prompt a confirmation before proceeding. (`y` to confirm)
 
 Another helpful command: using `sed`, delete all lines containing 'bootstrap-vue' in HTML files
 
@@ -122,7 +122,35 @@ find . -name "*.html" | sed -i '' '/bootstrap-vue/d'
 find . -name "*bootstrap-vue.min.css" | xargs -n1 rm
 ```
 
+Replace all instances of `font-weight-` with `fw-`:
+
+```bash
+ag -l 'font-weight-' | xargs -n1 sed -i '' 's/font-weight-/fw-/g'
+```
+
 Resources
 * [Linux commands: `xargs`](https://flaviocopes.com/linux-command-xargs/)
 * [Using sed: How to delete all lines containing a string](https://stackoverflow.com/questions/5410757/how-to-delete-from-a-text-file-all-lines-that-contain-a-specific-string)
+
+### Traversing the DOM
+
+While working on the Bootstrap 5 migration, due to changes in how Bootstrap handles event listeners, several components' logic had to be modified to maintain the same behaviour. 
+This was done by using selectors and methods to modify the DOM.
+
+* Using selectors: recursively (`.find`) or only on immediate children (`.children`)
+* Toggling classes on a Vue slot: by using selectors and `.toggle`
+
+One useful trick for CSS selectors is that you can right-click on an element in Chrome Devtools and copy its CSS selector! 
+
+Resources
+* [Quick reference of CSS selectors](https://www.w3schools.com/cssref/css_selectors.asp)
+
+### Chrome Devtools
+
+While testing and debugging, I found many features of Chrome Devtools to be useful:
+
+* Copy the CSS selector of an element
+* View all event listeners on an element
+* Force a state on an element (e.g. hover, focus)
+* View the properties of an element, which can be queried and/or modified with JavaScript
 

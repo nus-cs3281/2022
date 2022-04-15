@@ -39,4 +39,19 @@
 | 12 | Merged PR: [Migrate popovers and tooltips to floating-vue #1868](https://github.com/MarkBind/markbind/pull/1868) - continuation of #1856 |
 | 12 | Merged PR: [Add Components page to developer guide #1865](https://github.com/MarkBind/markbind/pull/1865) |
 | 12 | Merged PR: [Remove bootstrap-vue #1873](https://github.com/MarkBind/markbind/pull/1873) |
+| 12 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap v5: Base & Utilities #1834](https://github.com/MarkBind/markbind/pull/1834) |
+| 12 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Migrate badges #1884](https://github.com/MarkBind/markbind/pull/1884) |
+| 12 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Close button #1886](https://github.com/MarkBind/markbind/pull/1886) |
 | 12 | Discussion on issues: [#1027](https://github.com/MarkBind/markbind/issues/1027) |
+| 13 | Submitted issue: [Off-center NavBar items #1895](https://github.com/MarkBind/markbind/issues/1895) |
+| 13 | Submitted issue: [Allow setting of customized 404 page #1899](https://github.com/MarkBind/markbind/issues/1899) |
+| 13 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Remove jumbotron class #1885](https://github.com/MarkBind/markbind/pull/1885) |
+| 13 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Dropdowns #1888](https://github.com/MarkBind/markbind/pull/1888) |
+| 13 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Namespace data attributes #1892](https://github.com/MarkBind/markbind/pull/1892) |
+| 13 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Fix quizzes and questions #1890](https://github.com/MarkBind/markbind/pull/1890) |
+| 13 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Spacing fixes #1900](https://github.com/MarkBind/markbind/pull/1900) |
+| 13 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Horizontal rules #1901](https://github.com/MarkBind/markbind/pull/1901) |
+| 13 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Upgrade Bootswatch #1898](https://github.com/MarkBind/markbind/pull/1898) |
+| 13 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Prevent Navbars from being printed #1906](https://github.com/MarkBind/markbind/pull/1906) |
+| 13 | Merged PR: [Refactor MdAttributeRenderer and includePanelProcessor #1896](https://github.com/MarkBind/markbind/pull/1896) |
+| 13 | Merged PR: [Migrate to Bootstrap 5 #1882](https://github.com/MarkBind/markbind/pull/1882) |
