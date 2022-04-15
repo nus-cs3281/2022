@@ -3,12 +3,10 @@
 ## May 2021 - AY2021/22 Semester 1
 
 ### Pull Requests 
-
-#### Search API migration
+| Achievements |
+| ------------ |
 | Merged PR: [Improve error handling for search service #11241](https://github.com/TEAMMATES/teammates/pull/11241) |
 | Merged PR: [Delegate search indexing to cloud task queue #11315](https://github.com/TEAMMATES/teammates/pull/11315) |
-
-#### Bug fixes
 | Merged PR: [Fix bug that caused SVGs to fail to render #11165](https://github.com/TEAMMATES/teammates/pull/11165) |
 | Merged PR: [Index instructor who created course for searching #11427](https://github.com/TEAMMATES/teammates/pull/11427) |
 
@@ -50,8 +48,6 @@
 ## AY2021/22 Semester 2
 
 ### Pull Requests 
-
-#### Performance and Scalability
 | Achievements |
 | ------------ |
 | Merged PR: [Improve scalability of student cascade delete #11574](https://github.com/TEAMMATES/teammates/pull/11574) |
