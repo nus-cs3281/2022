@@ -196,5 +196,29 @@ Gathered some knowledge while reviewing related PRs and doing some testing.
 ### File locks
 When Java opens a file for writing, it obtains a file lock in the form of `filename.extension.lck` with `lck` standing for lock. 
 This serves to support mutual exclusion for access to writing to the file. This appears in RepoSense when loggers attempt to write to the log file in which case, some kind of mutual exclusion gurantee is required.
-- Notably, file locks (and other process resources) are released when the Java process exits(). 
+- Notably, file locks (and other process resources) are released when the main Java process `exits()`. 
 - However, in some scenarios when the program does not exit properly, the `.lck` file might be left behind. This can potentially cause issues in attempting to delete directories containing such an `.lck` file.
+  - Suggested by this [stackoverflow post](https://stackoverflow.com/questions/12849138/close-log-files/22957009#22957009), one way to easily release all log resources at the end of Java execution is to use `LogManager.getLogManager().reset()` which immediately releases all resources.
+
+### Checkstyle
+Their GitHub repository can be found [here](https://github.com/checkstyle/checkstyle) where we can view the features they are working on and bugs that other people are experiencing. 
+- In particular, there is a rather strange bug relating to `forceStrictCondition` which is not able to properly detect parent lines of nested line wrapppings.
+  - The relevant issues can be found in [Issue #6024](https://github.com/checkstyle/checkstyle/issues/6024) and [Issue #6020](https://github.com/checkstyle/checkstyle/issues/6020)
+- The above issues result in some somewhat strange enforcements, for example (taken from #6024), the code below has violations though it is what we expect the indentations to be
+
+```
+Arrays.asList(true,
+        Arrays.asList(true,
+                true, //violation
+                true));  //violation
+```
+- While the same line of code below is what passes the checkstyle but has unusual indentation.
+```
+Arrays.asList(true,
+        Arrays.asList(true,
+        true, // no violation, but should be
+        true));  // no violation, but should be
+```
+- There appears to be quite a distinct tradeoff here as without `forceStrictCondition`, checkstyle only enforces the minimum required indentation level. A user's indentation can be as large as they desire so long as it does not exceed the line character limit.
+  - However, if we were to `forceStrictCondition`, then for nested line wrappings, the indentation being enforced can be somewhat strange.
+

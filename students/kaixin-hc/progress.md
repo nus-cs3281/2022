@@ -20,8 +20,12 @@ Week | Achievements
 9    | Merged PR: [Improve devGuide to follow style guide](https://github.com/MarkBind/markbind/pull/1829)
 9    | Submitted Issue: [#1835 Avoid processing nunjucks in fenced code blocks](https://github.com/MarkBind/markbind/issues/1835)
 10   |
-11   | Submitted issue: [#1859 Inconsistency with frontmatter vs frontMatter](https://github.com/MarkBind/markbind/issues/1859)
 11   | Reviewed PR: [#1860 Improve existing GitHub issue templates](https://github.com/MarkBind/markbind/pull/1860)
-11   | Reviewed PR: [#1839 Update GitHub Action for MarkBind](https://github.com/MarkBind/markbind/pull/1839)
+11   | Reviewed PR: [#1839 Update GitHub Action for MarkBind](https://github.com/MarkBind/markbind/pull/1839) and merged this PR into master in week 12
 11   | Reviewed PR: [#1856 Migrate popovers and tooltips to floating-vue](https://github.com/MarkBind/markbind/pull/1856)
 11   | Reviewed PR: [#1865 Add Components page to developer guide](https://github.com/MarkBind/markbind/pull/1865)
+11   | Submitted Issues: <br/>- [#1866 Markbind init --convert improvements](https://github.com/MarkBind/markbind/issues/1866)<br/>- [#1869 Improve documentation of navigation bars and header.md files](https://github.com/MarkBind/markbind/issues/1869)<br/>- [#1859 Inconsistency with frontmatter vs frontMatter](https://github.com/MarkBind/markbind/issues/1859)
+12   | Reviewed PRs: [#1872 Add an explanation on how to use JavaScript chart libraries in MarkBind](https://github.com/MarkBind/markbind/pull/1872)
+12   | Reviewed PRs: [#1875 Fix edge cases of link validation and conversion](https://github.com/MarkBind/markbind/pull/1875)
+13   | Contributed to discussion: [#1027](), #1009 ,
+13   | Went through issues and tagged **good first issues** (#1879, #1791, #665, #1485, #1855).
