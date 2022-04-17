@@ -64,3 +64,19 @@ task taskA {
 }
 ```
 By avoiding task configuration for unwanted tasks, build time for the necessary tasks can be reduced.
+
+### Java 8 vs 11: Why Java 8 is still popular
+While exploring the possibility of [migrating RepoSense to Java 11](https://github.com/reposense/RepoSense/issues/1304), one consideration was whether potential RepoSense users are also migrating beyond Java 8.
+If most users stay with Java 8, this would decrease the size of our user base.
+
+A few surveys attest to the popularity of Java 8 vs other versions (including Java 11). These surveys can be found below:
+* https://www.infoworld.com/article/3652408/java-8-still-dominates-but-java-17-wave-is-coming-survey.html
+* https://snyk.io/blog/developers-dont-want-to-leave-java-8-as-64-hold-firm-on-their-preferred-release/
+
+While long-term support (LTS) was cited as a key factor in staying with Java 8, this can only explain why Java 8 is more popular than non-LTS versions. Java 11 and 17 are also LTS versions after all.
+
+Another possible factor is the [change in Java licensing for Java 11 and beyond](https://blogs.oracle.com/java/post/oracle-jdk-releases-for-java-11-and-later). As explained in [this article](https://www.frameworktraining.co.uk/blog/why-is-java-8-more-popular-than-java-14/), organisations using the Oracle JDK version of Java 11+ for commercial purposes need to pay for it.
+There is also OpenJDK, but in the same article, it was mentioned that some organisations are reluctant to use OpenJDK.
+
+On an additional note, [Java 8's Extended Support](https://www.oracle.com/java/technologies/java-se-support-roadmap.html) is expected to last longer compared to other LTS versions at this point in time. 
+For example, while Java 8 has Extended Support until December 2030, Java 11's Extended Support will end in September 2026. However, support for Java 11 may be extended in the future.

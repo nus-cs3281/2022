@@ -53,3 +53,11 @@ Never put any comments in `.json` files. Comments of the form `//...` and `/*...
 
 ### Class-style component syntax
 I came across this term during the integration of Typescript to our project. In Vue, this means that the syntax will be `export default class Counter extends Vue`. This is an alternative to the normal style we use. Some of the advantages includes the ability to utilize some ECMAScript language features such as class inheritance and decorators. For more details, please refer to [here](https://class-component.vuejs.org).
+
+### The use of a utility class
+Some functions are used by many parts of the project. We might find it tempting to put everything in a utility class and make it accessible to everyone. However, this increases coupling and makes future debugs/updates extremely difficult. We should examine the consumers of the functions and group them in a sensible way. In stead of having a huge utility class, we can split it into smaller ones with clear responsibilities. This way we apply separation of concerns and we might not need to make the class global.
+
+### Some useful typescript syntax
+- Optionals can be represented as `?`. For example, `age?: number` is equivalent to `age: number | undefined` but it is much simpler to read and write.
+- Arrays can be represented as `Array<T>` or `T[]`. I personally think that it is better to use the latter as it allows us to define an array of any complex objects.
+- We can define our own type if it is used commonly. The [syntax](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#interfaces) is straightforward. However, take note of the [Differences Between Type Aliases and Interfaces](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces).
