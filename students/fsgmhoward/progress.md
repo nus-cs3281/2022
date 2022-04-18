@@ -42,3 +42,8 @@
 | 12     | Reviewed PR: [TEAMMATES (Search page: Remove unnecessary panel) #11679](https://github.com/TEAMMATES/teammates/pull/11679)                                           |
 | 12     | Reviewed PR: [TEAMMATES (Notification Feature - Add mark as read to notification GET API) #11661](https://github.com/TEAMMATES/teammates/pull/11661)                 |
 | 12     | Answer Contributor's Qn on PR: [TEAMMATES (Update tzdb version to 2022a) #11661](https://github.com/TEAMMATES/teammates/pull/11708)                                  |
+| 13     | Reviewed PR: [TEAMMATES (Notification Feature - Add Mark As Read to Past Notification Page) #11731](https://github.com/TEAMMATES/teammates/pull/11731)               |
+| 13     | Reviewed PR: [TEAMMATES (Rename sanitize methods) #11735](https://github.com/TEAMMATES/teammates/pull/11735)                                                         |
+| 13     | Reviewed PR: [TEAMMATES (Notification Feature - E2E Tests for User Notifications Page) #11741](https://github.com/TEAMMATES/teammates/pull/11741)                    |
+| 13     | Authored PR (merged): [TEAMMATES (Notification feature - Fix permission problem for instructors) #11739](https://github.com/TEAMMATES/teammates/pull/11739)          |
+| 13     | Authored PR (in progress): [TEAMMATES (Notification feature - User frontend tests) #11741](https://github.com/TEAMMATES/teammates/pull/11741)                        |
