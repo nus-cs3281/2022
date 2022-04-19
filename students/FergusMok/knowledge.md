@@ -53,6 +53,18 @@ However, Google does not bill for storage, and only for writes and reads.
 
 Google's tutorial: https://youtu.be/d4CiMWy0J70?t=75
 
+### Git ReReRe
+While most people know the basics of git, git rerere is slightly more advanced. It stands for <b>Re</b>use <b>re</b>corded <b>re</b>solution.
+This is useful when working in parallel with branches, and rebasing a long-lived branch that will give merge conflicts. 
+The common problem is having to resolve the same conflict each time you rebase your branch. After toggling rerere on, 
+you will no longer need to resolve the same conflict again after solving it once. This is because git will record your conflict merge results, 
+and auto-solve them the next time around.
+
+`git config rerere.enabled true`
+
+Alternatively, if you are aware that many of your new commits will result in a conflict, it also be easier to squash them then rebase.
+
+Git ReReRe: https://git-scm.com/docs/git-rerere
 
 ### Additional Tips
 1. To pass additional flags to `npm run`, you can use append `-- --<flag>`. E.g `npm run test -- --detect-open-handles`

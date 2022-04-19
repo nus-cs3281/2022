@@ -40,15 +40,6 @@ Resources:
 
 [d3 Tutorials](https://observablehq.com/@d3/learn-d3)
 
-## Jest
-
-1. `jest.spyOn(object, methodName)` allows tracking calls to `object[methodName]` and creating a mock function. The spied methods are useful for mock implementation of services in frontend testing.
-2. Snapshot testing renders a UI component, takes a snapshot and then compares it to a reference snapshot file stored together with the test. Snapshot testing is great when you want to validate the structure of something like a component or an object.
-
-Resources:
-
-[Jest Snapshot Testing documentation](https://jestjs.io/docs/snapshot-testing)
-
 ## OAuth2.0
 TEAMMATES staging and production server uses [OAuth 2.0](https://datatracker.ietf.org/doc/html/rfc6749) for authorization.
 
@@ -70,10 +61,56 @@ Resources:
 
 [Data Consistency in Datastore Queries](https://cloud.google.com/appengine/docs/standard/java/datastore/data-consistency)
 
-## Backend 
-### Workflow
-As I built API for notification features, I learnt the backend workflow in TEAMMATES, from endpoint design, to access control and getActions, to execute the action, to use Logic and Db layers to create result. I learnt how to use Postman when designing API endpoints.
-### Testing
+## Backend
+Backend workflow:
+
+1. Request from users are forwarded to `WebAPIServlet`, which uses `ActionFactory` to find the match `Action`.
+2. `Action` has `checkAccessControl` and `execute`. `execute` generates an `ActionResult` object, which will be sent back to user via `WebAPIServlet`. For notifications, the format of output is `JsonResult`.
+
+Java keywords:
+
+1. `transient`: Variable with this modifier will not be serialised. During serialisation, the original value is ignored and a default value of that variable would be saved. For example, if `typicalDataBundle` stores a transient variable of an object, when the object instance is fetched, that field will not be saved. This is useful to protect sensitive information.
+2. `volatile`: Instead of writing to cache, all writes to a volatile variable will be written back to main memory immediately. Therefore all reads will be read directly from main memory. This guarantees the visibility for other threads of writes to that variable.
+
+Resources: 
+
+[Java Programming/Keywords/transient](https://en.wikibooks.org/wiki/Java_Programming/Keywords/transient)
+[Java Volatile Keyword](https://jenkov.com/tutorials/java-concurrency/volatile.html)
+
+## Testing
+
+Frontend - Jest:
+
+1. `jest.spyOn(object, methodName)` allows tracking calls to `object[methodName]` and creating a mock function. The spied methods are useful for mock implementation of services in frontend testing.
+2. Snapshot testing renders a UI component, takes a snapshot and then compares it to a reference snapshot file stored together with the test. Snapshot testing is great when you want to validate the structure of something like a component or an object.
+
+Resources:
+
+[Jest Snapshot Testing documentation](https://jestjs.io/docs/snapshot-testing)
+
+Backend:
 
 1. I learnt how to use `dataBundle` to create different instance of testing objects.
 2. Test Driven Development is helpful especially to catch bugs before fixing it.
+
+E2E - Selenium, PageObject:
+
+1. Selenium provides extensions for website test automation. `Selenium WebDriver` APIs identifies Web elements. WebDriver provides bindings which support classes. It has two-way communication with broswer through a driver (eg. ChromeDriver). WebDriver passes commands to Broswer through driver, while receives information back via the same route.
+
+2. Selenium helps identify web elements using locator strategies (e.g. class name, css selector, id, name or link text). `findElement` method will return the first element found in the context. `findElements` returns all elements matching a locator.
+
+3. Selenium helps interact with web elements. Basic commands are `click`, `send keys`, `clear`, `submit` and `select`. `select` could be useful to selection an `<option>` in a `<select>` element.
+
+4. PageObject design pattern is useful to model UI as objects in test code, reducing duplicated code. The public method in page object represents serivices that the page offers with proper abstraction. They return page objects. `PageFactory` package is used in TEAMMATES.
+
+Resources:
+
+[Selenium Documenation](https://www.selenium.dev/documentation/)
+[PageObject by Martin Fowler](https://martinfowler.com/bliki/PageObject.html)
+
+
+## Non-technical knowledge
+
+1. It is important to communicate openly and professionally so that everyone could sync up with each other.
+2. When releasing a feature, we might need to think of how to get the MVP done ASAP, so instead of working on everything simultaneously (i.e. both user facing features and admin features), sometimes it might be better to focus on getting one done thoroughly first.
+3. PR review requires strategy of concise and respectful communication. Writing reviewer friendly code is important to help them review more efficiently. It is also more preferred to make smaller PRs logically.

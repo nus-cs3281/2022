@@ -1,11 +1,19 @@
-### Project: Foo
+### Project: TEAMMATES
 
-Give an intro to the project here ...
+This semester we are introducing a new feature which involves quite a bit of planning and execution. The development team consists of 4 CS3281 students, and the entire project is a full-stack project covering everything from back-end API, logic and database design to front-end UI and UX. The entire feature is fully tested, including front-end and back-end unit tests, as well as end-to-end tests.
+
+TEAMMATES has come a long way, but there wasn't a way for us to reach out to our users besides sending emails. Even with emails, the original problem is still not solved - we want users to feel more connected with TEAMMATES, to know what is going in TEAMMATES. Hence, the Notification feature was born. With the new release on 16 April 2022, TEAMMATES users around the world will be able to login to the TEAMMATES portal and see the first notification from us. The notification system will allow the users to mark notifications as read, and browse through the history of notifications on a dedicated user notifactions page. For returning users, this is important as it gets them updated on how has TEAMMATES improved over the past months or years.Perhaps they will once again fall in love with TEAMMATES for the new features hardworking developers at TEAMMATES has brought to the platform :). On the other hand, with the new admin notifications page, the admin will have complete control over how the notifications will be displayed to the user, be it the style of the notification or who the notification is targeted at.
 
 ### My Contributions
 
-Give a description of your contributions, including links to relevant PRs
+My contributions as a mentor includes giving general directions, assessing blockers and prioritising objectives to ensure that goals are met within the given deadline. The bulk of my work also includes code reviews and ensuring that things go as expected. 
 
 ### My Learning Record
 
-Give tools/technologies you learned here. Include resources you used, and a brief summary of the resource.
+As a mentor for this project, I have learned and grew together with the CS3281 students, and I will be sharing the takeaways from my experience as a mentor, and a reviewer.
+
+#### As a mentor
+As a mentor, it is important to establish communication with the mentees, so that it is convenient for them to raise issues and potential blockers early. Slack is our asynchronous mode of communication and I had to say that it has been an effective platform for raising quick issues, discussing possible solutions or even pinging each other for reviews. However, I do also realise that there are limitations with this kind of text-based communication, one of them being that it can be difficult to make sure that everyone is on the same page, without being able to see them or hear them. We can only assume that everyone has read the message and understood the importance of it or the intent behind it. In constrast, physical or online meetings allow for a continuous stream of conversation between parties to work out misconceptions and make things crystal clear. This can help to avoid miscommunications which otherwise could delay milestone objectives. On the other hand, face-to-face or online meetings also has its caveats, in that team members may feel shy to voice out or have yet to digest the conversation. Hence, a secondary asynchronous mode of communication via Slack is still important to "patch the holes".
+
+#### As a reviewer
+As a reviewer, I realise the many tendencies of developers to go with their own style or way of doing things. It is quite natural for different people to approach things differently. While most of the code may not be wrong or affect correctness, in a software engineering project this would lead to a mess and it will present a lot of difficulties for other developers who see the code for the first time. Hence, while understanding the design and architecture of a project is important, making sure that new developers understand the importance of the coding standard is equally important. I have realised the importance of "nitpicks" to slowly adjust these tendencies and allow new developers to write code that do not stand out for the wrong reasons in the codebase. I have also observed that it takes time to push cleaner and more standard-consistent PRs, and as a reviewer, telling the "why" instead of stating the "what" when giving reviews is important for allowing new developers to learn.

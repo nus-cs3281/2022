@@ -34,4 +34,7 @@
 | 12 | Merged PR: [Gradle: update node and execfork plugins to newer versions #1744](https://github.com/reposense/RepoSense/pull/1744) |
 | 13 | Merged PR: [Rearrange Gradle tasks and their dependencies #1631](https://github.com/reposense/RepoSense/pull/1631) |
 | 13 | Merged PR: [DevOps: update uploading of coverage reports to Codecov #1735](https://github.com/reposense/RepoSense/pull/1735) |
-
+| 13 | Merged PR: [Docs: update, fix typos and improve docs for flag conflicts #1724](https://github.com/reposense/RepoSense/pull/1724) |
+| 13 | Merged PR: [GitHub Actions: Change node version semantic for Cypress #1755](https://github.com/reposense/RepoSense/pull/1755) |
+| 13 | Merged PR: [Checkstyle: implement new checks and update throwsIndent value #1757](https://github.com/reposense/RepoSense/pull/1757) |
+| 13 | Reviewed PR: [Add system test cases for local repositories #1746](https://github.com/reposense/RepoSense/pull/1746) |

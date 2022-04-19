@@ -169,3 +169,15 @@ derive semantic meaning to save it from deprecation.
 - [Why \<big\> is not in HTML 5 Tag list while \<small\> is?](https://stackoverflow.com/questions/2260024/why-big-is-not-in-html-5-tag-list-while-small-is)
 - [Why Do Some HTML Elements Become Deprecated?](https://css-tricks.com/why-do-some-html-elements-become-deprecated/)
 </panel>
+
+<panel header="### Logging" type="seamless" peek>
+
+While logging can be trivial, sometimes as simple as a console.log statement, it plays a crucial role in debugging and especially in CLI applications.
+
+Some things to consider when logging:
+- When to log?
+- At what level of detail?
+- Log to where? (Console, file, etc.)
+
+- [Winston Logger Ultimate Tutorial: Best Practices, Resources, and Tips](https://stackify.com/winston-logging-tutorial/)
+</panel>
