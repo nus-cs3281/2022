@@ -47,3 +47,21 @@ Example of emulated view encapsulation:
 Notice that there is a special `_ngcontent-ctx-c23` attribute applied to the elements within `app-issue` component, while the `app-issue` element itself acts as a "shadow host", hence the attribute `_nghost-ctx-c23`. However, the content of the child component `app-issue-title` will not have this attribute. In the bottom picture, we see that Angular has changed our CSS styles such that it will only be applied to elements with attributes such as `_ngcontent-ctx-c23`. This prevents the style from being applied throughout the web page, hence emulating the behaviour of ShadowDOM.
 
 Going back to the initial question, why were the styles not applied to the generated HTML? This is because we were using the default emulated view encapsulation, so the imported CSS file will be edited to include the unique attribute `_ngcontent-ctx-cXX`. The generated HTML however, does not have this attribute. Therefore, we will need to set the view encapsulation to None, so that we can apply the markdown-like CSS styles to the generated HTML.
+
+### Authentication and authorization
+
+In CATcher, we need to perform authentication to ensure that users who log in are <tooltip content="Users are actually who they claim to be">authentic</tooltip>. Authorization is also needed to ensure that only the relevant students, tutors and admins can log in to CATcher. To achieve this, CATcher uses Github OAuth to authenticate and authorize users.
+
+OAuth is an open-standard protocol for authorization. By using Github OAuth, the user first authenticates himself by logging into his own Github account. Then, Github will ask the user for permission to allow CATcher to access certain content and perform certain actions. By accepting the permission request, Github will authorize CATcher to act on the user's behalf, for example, to create a new issue during PE. Here are the details behind the OAuth process when a user tries to log into CATcher:
+
+1. User selects a session and logs in.
+2. CATcher will redirect the user to Github to log in, and specify the scope of permissions needed for CATcher.
+3. The user is redirected back to CATcher. Github will send an authorization code to CATcher.
+4. CATcher will request for an access token from Github. However, it has to do so through a backend server (gatekeeper).
+5. The browser receives the access token from Github via gatekeeper. This access token will be used to authenticate future Github API requests made by the user.
+
+Thanks to OAuth, users can grant third-party applications permissions to access, modify or delete content on another account. CATcher benefits from this because users do not need to use the Github interface directly to do their PE.
+
+However, the access token must be securely kept, since anyone who has the access token can perform actions on behalf of CATcher. 
+
+More resources here: [Github OAuth guide](https://docs.github.com/en/developers/apps/building-oauth-apps/authorizing-oauth-apps#web-application-flow), [IETF RFC6749 document](https://datatracker.ietf.org/doc/html/rfc6749)
