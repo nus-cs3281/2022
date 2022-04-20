@@ -25,7 +25,7 @@ Overall, this entire process has led me to better understand and appreciate work
 | 14 Jan 2022 | Responded to queries: [Creating vs forking vs duplicating markdown-it plugins #1707](https://github.com/MarkBind/markbind/issues/1707) |
 | 15 Jan 2022 | Responded to queries: [Allow a way to ping active-devs for comments on issues/PRs #1717](https://github.com/MarkBind/markbind/issues/1717) |
 | 16 Jan 2022 | Responded to queries: [Setting up on windows 11 does not work as intended? #1721](https://github.com/MarkBind/markbind/issues/1721) |
-| 17 Jan 2022 | Investigated Issue: [Page Navigation Menus not working with titles that contain `{{ content }}` #1720](https://github.com/MarkBind/markbind/issues/1720) |
+| 17 Jan 2022 | Investigated Issue: [Page Navigation Menus not working with titles that contain `{% raw %}{{ content }} {% endraw %}` #1720](https://github.com/MarkBind/markbind/issues/1720) |
 | 19 Jan 2022 | Investigated Issue: [Update Algolia plugin #1729](https://github.com/MarkBind/markbind/issues/1729) |
 | 28 Jan 2022 | Submitted Issue: [Local CI test and Github's CI test produce different results #1740](https://github.com/MarkBind/markbind/issues/1740) |
 | 8 Feb 2022 | Responded to queries: [Create 'folder' variables for accessing files within a folder when building listing page/site/top nav #1753](https://github.com/MarkBind/markbind/issues/1753) |
@@ -45,7 +45,9 @@ Overall, this entire process has led me to better understand and appreciate work
 | 15 Mar 2022 | Responded to queries: [Markbind documentation for teammates #1806](https://github.com/MarkBind/markbind/issues/1806) |
 | 15 Mar 2022 | Investigated Issue: [Nunjucks embeds override variables defined in the file it is called in #1830](https://github.com/MarkBind/markbind/issues/1830) |
 | 16 Mar 2022 | Investigated Issue: [Bootstrap 5 #1702](https://github.com/MarkBind/markbind/issues/1702) |
+| 17 Mar 2022 | Responded to queries: [Support a way to set the primary color of a site #903](https://github.com/MarkBind/markbind/issues/903) |
 | 21 Mar 2022 | Submitted Issue: [Upgrade simple-git version #1843](https://github.com/MarkBind/markbind/issues/1843) |
+| 21 Mar 2022 | Responded to queries: [Support site versioning #1009](https://github.com/MarkBind/markbind/issues/1009) |
 | 25 Mar 2022 | Investigated Issue: [Alternative syntax for frontmatter #1850](https://github.com/MarkBind/markbind/issues/1850) |
 | 29 Mar 2022 | Investigated Issue: [Incorrect report of success when CLI commands actually fail #1863](https://github.com/MarkBind/markbind/issues/1863) |
 | 3 Apr 2022 | Submitted Issue: [Change checklist to dropdown in issue templates #1871](https://github.com/MarkBind/markbind/issues/1871) |
