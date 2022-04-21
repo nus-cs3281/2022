@@ -55,6 +55,9 @@
 ### Reviews 
 | Achievements |
 | ------------ |
+| Reviewed PR: [Add notification banner E2E test (General E2E test case) #11748](https://github.com/TEAMMATES/teammates/pull/11748) |
+| Reviewed PR: [Notification Feature - E2E Tests for User Notifications Page #11742](https://github.com/TEAMMATES/teammates/pull/11742) |
+| Reviewed PR: [Notification feature - User frontend tests #11741](https://github.com/TEAMMATES/teammates/pull/11741) |
 | Reviewed PR: [Notification feature - Fix permission problem for instructors #11739](https://github.com/TEAMMATES/teammates/pull/11739) |
 | Reviewed PR: [Notification Feature - Add test for GetNotificationAction and fix comments #11738](https://github.com/TEAMMATES/teammates/pull/11738) |
 | Reviewed PR: [Notification Feature - Add Mark As Read to Past Notification Page #11731](https://github.com/TEAMMATES/teammates/pull/11731) |
