@@ -38,3 +38,4 @@
 | 13 | Merged PR: [GitHub Actions: Change node version semantic for Cypress #1755](https://github.com/reposense/RepoSense/pull/1755) |
 | 13 | Merged PR: [Checkstyle: implement new checks and update throwsIndent value #1757](https://github.com/reposense/RepoSense/pull/1757) |
 | 13 | Reviewed PR: [Add system test cases for local repositories #1746](https://github.com/reposense/RepoSense/pull/1746) |
+| 13 | PR Ready but not merged yet: [gradle.yml: Upgrade Codecov Action #128](https://github.com/se-edu/addressbook-level3/pull/128) |
