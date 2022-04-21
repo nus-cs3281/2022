@@ -30,3 +30,9 @@
 | 11 | Authored PR: [Notification feature - Add tests PUT and DELETE route #11701](https://github.com/TEAMMATES/teammates/pull/11701) |
 | 11 | Authored PR: [Notification Feature - E2E tests for admin features #11695](https://github.com/TEAMMATES/teammates/pull/11695) |
 | 11 | Reviewed PR: [Notification Feature - Notification Logic Tests #11696](https://github.com/TEAMMATES/teammates/pull/11696) |
+| 13 | Reviewed PR: [Notification Feature - Add Mark As Read to Past Notification Page #11731](https://github.com/TEAMMATES/teammates/pull/11731) |
+| 13 | Reviewed PR: [Notification Feature - Notification Banner #11720](https://github.com/TEAMMATES/teammates/pull/11720) |
+| 13 | Reviewed PR: [Notification Feature - Add test for GetNotificationAction and fix comments #11738](https://github.com/TEAMMATES/teammates/pull/11738) |
+| 13 | Reviewed PR: [Update supported browsers list + add IE deprecation warning #11730](https://github.com/TEAMMATES/teammates/pull/11730) |
+| Reading | Authored PR: [Add notification banner E2E test (E2E in individual pages) #11749](https://github.com/TEAMMATES/teammates/pull/11749) |
+| Reading | Reviewed PR: [Notification Feature - E2E Tests for User Notifications Page #11742](https://github.com/TEAMMATES/teammates/pull/11742) |
