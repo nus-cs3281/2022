@@ -18,5 +18,6 @@
 | 10 | Merged PR [#907 Add a link to report CATcher problems](https://github.com/CATcher-org/CATcher/pull/907) |
 | 10 | Investigated Issue [#914 Difference in output due to newline characters](https://github.com/CATcher-org/CATcher/issues/914) |
 | 11 | Authored PR (in-progress) [#917 Add a timed toast to undo deleting issues](https://github.com/CATcher-org/CATcher/pull/917) |
+| 11 | Merged Documentation PR [#16 UG Instructors: Add Create Session Link for Students](https://github.com/CATcher-org/catcher-org.github.io/pull/16) |
 | 13 | Merged PR [#918 Upload multiple files on drag and drop](https://github.com/CATcher-org/CATcher/pull/918) |
 | R | Reviewed PR [#933 Remove assignee check API](https://github.com/CATcher-org/CATcher/pull/933) | 
