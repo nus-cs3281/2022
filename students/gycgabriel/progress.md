@@ -14,6 +14,7 @@
 | 7 | Opened issue [#889 Suggestion: Add a timed toast to undo deleting issues](https://github.com/CATcher-org/CATcher/issues/889) |
 | 7 | Opened issue [#890 Refactor colour constants in LabelService.ts](https://github.com/CATcher-org/CATcher/issues/890) |
 | 7 | Merged PR [#891 Refactor colour constants in LabelService and CSS constants in LabelConstants](https://github.com/CATcher-org/CATcher/pull/891) |
+| 8 | Reviewed PR [#899 Create issue templates](https://github.com/CATcher-org/CATcher/pull/899) |
 | 10 | Merged PR [#907 Add a link to report CATcher problems](https://github.com/CATcher-org/CATcher/pull/907) |
 | 10 | Investigated Issue [#914 Difference in output due to newline characters](https://github.com/CATcher-org/CATcher/issues/914) |
 | 11 | Authored PR (in-progress) [#917 Add a timed toast to undo deleting issues](https://github.com/CATcher-org/CATcher/pull/917) |
