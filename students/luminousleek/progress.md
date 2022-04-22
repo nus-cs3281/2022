@@ -14,4 +14,6 @@
 | 8 | Merged PR [#904 Abstract code to find comments that match a template to the Template class](https://github.com/CATcher-org/CATcher/pull/904) |
 | 9 | Merged PR [#910 Use coroutine parsers for Issue Templates](https://github.com/CATcher-org/CATcher/pull/910) |
 | 9 | Reviewed PR [#894 Improve Duplicate Issue Search in Team Response Phase](https://github.com/CATcher-org/CATcher/pull/894) |
-| 11 | Authored PR [#920 Integrate arcsecond parsers and remove Section](https://github.com/CATcher-org/CATcher/pull/920) |
+| 11 | Merged PR [#920 Integrate arcsecond parsers and remove Section](https://github.com/CATcher-org/CATcher/pull/920) |
+| 12 | Reviewed PR [#917 Add a timed toast to undo deleting issues](https://github.com/CATcher-org/CATcher/pull/917) |
+| Reading | Merged PR [#932 Fix #931 Searching for issues assigned to multiple users](https://github.com/CATcher-org/CATcher/pull/932) |
