@@ -25,3 +25,5 @@
 | 13 | Reviewed PR: [TEAMMATES (Uninformative error message for incorrectly typed date input) #11524](https://github.com/TEAMMATES/teammates/pull/11524) |
 | 13 | Re-Investigated Issue: [TEAMMATES (Tables showing incorrect message after loading) #11551](https://github.com/TEAMMATES/teammates/issues/11551) |
 | 13 | Reviewed PR: [TEAMMATES (Fix incorrect loading message (rework)) #11750](https://github.com/TEAMMATES/teammates/pull/11750) |
+| 13 | Reviewed PR: [TEAMMATES (Session closing email contains no information about extended deadline) #11758 ](https://github.com/TEAMMATES/teammates/pull/11758) |
+| 13 | Opened issue: [TEAMMATES (Instructor editing sessions and deadline extensions: Synchronize feedback session edit between tabs) #11760](https://github.com/TEAMMATES/teammates/issues/11760) |
