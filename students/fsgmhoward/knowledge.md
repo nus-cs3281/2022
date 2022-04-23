@@ -96,3 +96,17 @@ typical data bundle. Then, `@AfterMethod` fetch all IDs and delete all entities 
 Document Referred:
 * https://www.javatpoint.com/testng-beforemethod-annotation
 * https://www.javadoc.io/doc/org.testng/testng/7.0.0/org/testng/annotations/BeforeMethod.html
+
+### Jest: SpyOn
+
+This method can be useful for frontend testing as it can mock a certain function (i.e. injecting a mocked function).
+For example, it can be used to replace message service's toast functions to record the number of calls to them and
+the message used to present to the users.
+
+Document Referred:
+* https://jestjs.io/docs/jest-object
+
+### Snapshot testing methology
+
+Snapshot tests are to be generated from a set state, not from a process. For example, component's state can be set
+directly and then take the snapshot. Process can be tested separately instead of combining it with the snapshot tests.

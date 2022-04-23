@@ -65,6 +65,10 @@ We must add GitHub action workflow files to the directory `.github/workflows` in
 - The general workflow of a `.yml` workflow file contains a declaration `on` which states under what scenarios will these actions be triggered
   - It is followed by a list of jobs. For each job, we can declare a name, platform to run on, environment variables, followed by sequential steps to perform.
   - Under steps, we can use `run` to run shell scripts similar to running the same command from a BASH terminal 
+- When setting up an environment to perform a specific workflow, we can generally choose exactly what OS to run, what versions of Java or other languages/packages to use. 
+  - It is additionally helpful to be aware of what are the versions used by default for the various OS-es. 
+    - [Ubuntu 20.04](https://github.com/actions/virtual-environments/blob/c253e7f4d192e492988596167a1d461e99698c13/images/linux/Ubuntu2004-README.md) - here we can see the default Git used is 2.30.2. It might be helpful to be aware of such specifications as we might experience differing behavior in the future due to version differences.
+  - Related to RepoSense, and caused me quite a bit of trouble is that GitHub Actions uses the default timezone of UTC+00.00 which leads to some commits being assigned to the previous day as compared to if it were run locally on my own machine which is at UTC+8. 
 
 ## Git Specifications:
 ### Git Diff Output
@@ -140,11 +144,24 @@ Java provides extensive support for Regex matching via the `Pattern` and `Matche
 - [`Matcher`](https://docs.oracle.com/javase/8/docs/api/java/util/regex/Matcher.html)
   - We can perform `Pattern p = ...; p.matcher("some String")` to obtain a `Matcher` object. Most of the information that we want can be obtained from this object.
   - However, there are some points to be noted about the implementation of the `Matcher` object in Java.
-    - `Matcher` objects (as of Java 11) are initially just a mutable container containing the regex and the String. Matching logic has not yet been performed.
-    - Suppose we have named groups within our regex pattern. We have to run a `matches` or `find` method for the groups to be queried. Otherwise, we will keep getting an `IllegalStateException`. 
-      - The methods like `matches` and `find` mutate the `Matcher` object. 
+    - `Matcher` objects (for Java 8 and 11) are initially just a mutable container containing the regex and the String. Matching logic has not yet been performed.
+    - Suppose we have named groups within our regex pattern. We have to run a `matches` or `find` method at least once for the object to mutate and support group queries. 
+      - Calling a `Matcher::group` directly without first calling `matches` or `find` leads to an `IllegalStateException` as the object never attempted to match anything yet. 
 
 Regex testing can be particularly cumbersome, slow and difficult to grasp why the regex is behaving the way it is. I personally found this website [regex101](https://regex101.com/) which allows convenient testing of various regex patterns on different inputs. It also supports regex testing for different languages.
+
+## GSON package
+Gson (also known as Google Gson) is an open-source Java library to serialize and deserialize Java objects to (and from) JSON. (Taken from Wikipedia's description)
+- I used this [baeldung.com guide](https://www.baeldung.com/gson-json-to-map) to learn about converting JSON objects into HashMaps. They also have various other articles describing other features like deserialization to greater depth. Their API can also be easily found online. This is their [2.9.0 API](https://javadoc.io/doc/com.google.code.gson/gson/latest/index.html).
+- From my experience, the general way in which GSON reads a JSON file is to read it into a `JsonElement` abstract class with four different types, a `JsonArray`, `JsonNull`, `JsonObject` and `JsonPrimitive`. 
+  - Most of the types listed above are very similar to their Java counterparts. The one that stands out is the `JsonObject` which is more similar to the Javascript object as it is a collection of name-value pairs where each name is a string and each value is another `JsonElement`.
+- In order to read JSON files into more exotic objects that we might have previously defined, we can either use a `TypeToken` for the GSON `JsonParser` or implement our own `JsonDeserializer` for each class we want to be read from a JSON file.
+  - One naive way of parsing a JSON file into a Map is to do `Map map = new Gson().fromJson(JSON_FILE, Map.class);`. However, this immediately runs into the problem where the map class itself is using raw types.
+    - To avoid this, we can use a `TypeToken`. By creating a new type as such
+    
+          Type mapType = new TypeToken<Map<String, Commit>>() {}.getType();
+          Map<String, Commit> map = new Gson().fromJson(JSON_FILE, mapType);
+      We are able to preserve the generics class types used.
 
 ## Others
 ### "file" URI Scheme
@@ -187,18 +204,15 @@ Limitations:
 
 Thus, we should still exercise discretion in using this tool even if it is something as simple as removing unused variables or methods.
 
-### Checkstyle
-Gathered some knowledge while reviewing related PRs and doing some testing.
-- It seems that indentation enforcement is quite buggy for `checkstyle` as can be seen in this [issue](https://github.com/checkstyle/checkstyle/issues/5448) and several others raised at a later date.
-- There is an option to `forceStrictCondition` which strictly enforces some number of spaces indentation for all children lines, even if there are children-of-children-lines which we would normally add a new level of indentation.
-  - One way to get around it is to not use `forceStrictCondition`. The limitation is that the indentation checks then become the minimum number of spaces required. The actual number of spaces used can be arbitrarily large. 
-
 ### File locks
 When Java opens a file for writing, it obtains a file lock in the form of `filename.extension.lck` with `lck` standing for lock. 
 This serves to support mutual exclusion for access to writing to the file. This appears in RepoSense when loggers attempt to write to the log file in which case, some kind of mutual exclusion gurantee is required.
-- Notably, file locks (and other process resources) are released when the main Java process `exits()`. 
-- However, in some scenarios when the program does not exit properly, the `.lck` file might be left behind. This can potentially cause issues in attempting to delete directories containing such an `.lck` file.
-  - Suggested by this [stackoverflow post](https://stackoverflow.com/questions/12849138/close-log-files/22957009#22957009), one way to easily release all log resources at the end of Java execution is to use `LogManager.getLogManager().reset()` which immediately releases all resources.
+- Notably, file locks (and other process resources) are released automatically when the main Java process `exits()`. 
+  - However, in some scenarios, releasing the lock only at the end of the entire process might be too late. One example I encountered is that when running `gradlew` system tests, the `log` file lock is held on to for the entire duration of the run over multiple system tests. This causes issues with running consecutive system tests as I am unable to delete the previous system test's report due to the lingering file lock.
+- In some scenarios when the program does not exit properly, the `.lck` file might be left behind. 
+  - An example execution that results in this is running RepoSense via `gradlew` command line with the `-v` command. After `ctrl+C` to close the server, the `.lck` file persists even though it should have been cleaned up. For some reason, running `gradlew` on Ubuntu 18.04 does not have the same issue.
+    - However, this seems to be mostly harmless as it does not affect anything else.
+- Suggested by this [stackoverflow post](https://stackoverflow.com/questions/12849138/close-log-files/22957009#22957009), one way to easily release all log resources at the end of Java execution is to use `LogManager.getLogManager().reset()` which immediately releases all resources.
 
 ### Checkstyle
 Their GitHub repository can be found [here](https://github.com/checkstyle/checkstyle) where we can view the features they are working on and bugs that other people are experiencing. 

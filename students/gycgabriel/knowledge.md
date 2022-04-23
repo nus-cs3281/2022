@@ -82,8 +82,30 @@ The dynamic expression can be evaluated in the context of the corresponding .ts 
 Parenthesis within html tags, for example `(click)` are used to call the component's corresponding method on click. In the example above, `$event.stopPropagation()` is a Javascript call that prevents the label `Disagree` within the issue bar from being clickable because its parent is clickable. The click event from parent is stopped from propagating to this particular child. 
 
 
-Resource:
+Resources:
 * [Angular Doc Property Binding](https://angular.io/guide/property-binding)
 * [Angular Doc Event Binding](https://angular.io/guide/event-binding)
 * [StackOverflow simple summary](https://stackoverflow.com/a/35944965)
 * [StackOverflow Stop Propagation](https://stackoverflow.com/questions/32315647/javascript-how-does-event-stoppropagation-work)
+
+### Git Rebase
+
+Below is a link to a good explanation with visuals to explain rebasing. Rebasing helped to clean the commit history of my main branch after accidental merging with other branches.
+
+Resource:
+* [github fork : your branch is 5 commits ahead how to clean this without pushing](https://stackoverflow.com/a/29049698) |
+
+### Github File Upload API: CreateFile vs CreateTree
+
+The API for committing a single file and committing multiple files at once are different.
+Attempting to do multiple single file commits in a short duration of time will likely cause HttpError to occur. The current recommeded fix is to put in sleep before the next single file commit, or merge multiple single file commits into a single multiple file commit.
+
+Resources:
+* [Use Octokit or the GitHub Rest API to upload multiple files](https://stackoverflow.com/a/58837709)
+* [GITHub API Issue with file upload](https://stackoverflow.com/a/19732043)
+* [Committing multiple files code gist Octokat](https://gist.github.com/StephanHoyer/91d8175507fcae8fb31a)
+* [Octokit Pushing a tree](https://github.com/octokit/octokit.js/issues/1308)
+* [Github API Edit multiple files upload](https://stackoverflow.com/questions/61583403/edit-multiple-files-in-single-commit-with-github-api)
+
+
+

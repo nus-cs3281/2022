@@ -43,6 +43,7 @@
 | 12 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Migrate badges #1884](https://github.com/MarkBind/markbind/pull/1884) |
 | 12 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Close button #1886](https://github.com/MarkBind/markbind/pull/1886) |
 | 12 | Discussion on issues: [#1027](https://github.com/MarkBind/markbind/issues/1027) |
+| 13 | Reviewed PR: [Basic Annotation Feature #1858](https://github.com/MarkBind/markbind/pull/1858) |
 | 13 | Submitted issue: [Off-center NavBar items #1895](https://github.com/MarkBind/markbind/issues/1895) |
 | 13 | Submitted issue: [Allow setting of customized 404 page #1899](https://github.com/MarkBind/markbind/issues/1899) |
 | 13 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Remove jumbotron class #1885](https://github.com/MarkBind/markbind/pull/1885) |
@@ -54,4 +55,8 @@
 | 13 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Upgrade Bootswatch #1898](https://github.com/MarkBind/markbind/pull/1898) |
 | 13 | Merged PR (into `bootstrap-v5-migration` branch): [Bootstrap 5: Prevent Navbars from being printed #1906](https://github.com/MarkBind/markbind/pull/1906) |
 | 13 | Merged PR: [Refactor MdAttributeRenderer and includePanelProcessor #1896](https://github.com/MarkBind/markbind/pull/1896) |
+| 13 | Merged PR: [Fix typos in docs #1902](https://github.com/MarkBind/markbind/pull/1902) |
 | 13 | Merged PR: [Migrate to Bootstrap 5 #1882](https://github.com/MarkBind/markbind/pull/1882) |
+| RD | Reviewed PR: [Basic Annotation Feature #1858](https://github.com/MarkBind/markbind/pull/1858) |
+| RD | Discussion on issues: [#1883](https://github.com/MarkBind/markbind/issues/1883), [#1909](https://github.com/MarkBind/markbind/issues/1909), [#1819](https://github.com/MarkBind/markbind/issues/1819) |
+| RD | Merged PR: [Fix modal positioning in panel headers #1910](https://github.com/MarkBind/markbind/pull/1910) |
