@@ -18,7 +18,7 @@ Overall, this entire process has led me to better understand and appreciate work
 | 20 Jun 2021 | Investigated Issue: [Collapsed page-nav covers content #1590](https://github.com/MarkBind/markbind/issues/1590) |
 | 27 Jun 2021 | Investigated Issue: [User Guide: Unable to open details panel on mobile #1601](https://github.com/MarkBind/markbind/issues/1601) |
 | 28 Jun 2021 | Investigated Issue: [Vue warning for Tabs 'active' prop #1610](https://github.com/MarkBind/markbind/issues/1610) |
-| 8 Jul 2021 | Responded to queries: [Deployment url logging not respecting CNAME #1575](https://github.com/MarkBind/markbind/issues/1575) |
+| 8 Jul 2021 | Investigated Issue: [Deployment url logging not respecting CNAME #1575](https://github.com/MarkBind/markbind/issues/1575) |
 | 2 Aug 2021 | Responded to queries: [Line ending issues when developing in Windows environment #1640](https://github.com/MarkBind/markbind/issues/1640) |
 | 28 Dec 2021 | Submitted Issue: [Navbar overflows when there is a long list of items #1699](https://github.com/MarkBind/markbind/issues/1699) |
 | 10 Jan 2022 | Responded to queries: [Deployment breaks due to faulty version of colors.js #1703](https://github.com/MarkBind/markbind/issues/1703) |
@@ -29,32 +29,32 @@ Overall, this entire process has led me to better understand and appreciate work
 | 19 Jan 2022 | Investigated Issue: [Update Algolia plugin #1729](https://github.com/MarkBind/markbind/issues/1729) |
 | 28 Jan 2022 | Submitted Issue: [Local CI test and Github's CI test produce different results #1740](https://github.com/MarkBind/markbind/issues/1740) |
 | 8 Feb 2022 | Responded to queries: [Create 'folder' variables for accessing files within a folder when building listing page/site/top nav #1753](https://github.com/MarkBind/markbind/issues/1753) |
-| 8 Feb 2022 | Responded to queries: [Support $$ as delimiter for math formula #1754](https://github.com/MarkBind/markbind/issues/1754) |
+| 8 Feb 2022 | Discussion on issue: [Support $$ as delimiter for math formula #1754](https://github.com/MarkBind/markbind/issues/1754) |
 | 9 Feb 2022 | Responded to queries: [Move all CI / CD to github actions #1386](https://github.com/MarkBind/markbind/issues/1386) |
 | 13 Feb 2022 | Responded to queries: [Inconsistent logger warning for repeated slots/attributes #1764](https://github.com/MarkBind/markbind/issues/1764) |
 | 14 Feb 2022 | Responded to queries: [How to handle changes to .min files which are not markbind.min #1771](https://github.com/MarkBind/markbind/issues/1771) |
-| 14 Feb 2022 | Responded to queries: [Scoped Styles - potential performance hit? #1768](https://github.com/MarkBind/markbind/issues/1768) |
+| 14 Feb 2022 | Discussion on issue: [Scoped Styles - potential performance hit? #1768](https://github.com/MarkBind/markbind/issues/1768) |
 | 14 Feb 2022 | Submitted Issue: [Any `*.md` in text is auto converted to a link #1774](https://github.com/MarkBind/markbind/issues/1774) |
-| 14 Feb 2022 | Submitted Issue: [Replace dummy <span>s with scroll-margin-top for anchor navigation with fixed header #1775](https://github.com/MarkBind/markbind/issues/1775) |
+| 14 Feb 2022 | Submitted Issue: [Replace dummy `<span>`s with scroll-margin-top for anchor navigation with fixed header #1775](https://github.com/MarkBind/markbind/issues/1775) |
 | 16 Feb 2022 | Responded to queries: [Should alpha/beta/pre-release versioning tags also trigger UG update? #1776](https://github.com/MarkBind/markbind/issues/1776) |
 | 24 Feb 2022 | Investigated Issue: [Unexpected siteNav scrolling effect on small screens #1794](https://github.com/MarkBind/markbind/issues/1794) |
 | 27 Feb 2022 | Responded to queries: [Upgrade Jest version #1796](https://github.com/MarkBind/markbind/issues/1796) |
 | 7 Mar 2022 | Responded to queries: [`tip-box` is not documented and can be deprecated #1804](https://github.com/MarkBind/markbind/issues/1804) |
-| 12 Mar 2022 | Responded to queries: [Emails are wrongly validated as links #1820](https://github.com/MarkBind/markbind/issues/1820) |
+| 12 Mar 2022 | Discussion on issue: [Emails are wrongly validated as links #1820](https://github.com/MarkBind/markbind/issues/1820) |
 | 13 Mar 2022 | Investigated Issue: [Unable to serve/build with a site config file from another directory #1825](https://github.com/MarkBind/markbind/issues/1825) |
-| 15 Mar 2022 | Responded to queries: [Markbind documentation for teammates #1806](https://github.com/MarkBind/markbind/issues/1806) |
+| 15 Mar 2022 | Discussion on issue: [Markbind documentation for teammates #1806](https://github.com/MarkBind/markbind/issues/1806) |
 | 15 Mar 2022 | Investigated Issue: [Nunjucks embeds override variables defined in the file it is called in #1830](https://github.com/MarkBind/markbind/issues/1830) |
 | 16 Mar 2022 | Investigated Issue: [Bootstrap 5 #1702](https://github.com/MarkBind/markbind/issues/1702) |
-| 17 Mar 2022 | Responded to queries: [Support a way to set the primary color of a site #903](https://github.com/MarkBind/markbind/issues/903) |
+| 17 Mar 2022 | Discussion on issue: [Support a way to set the primary color of a site #903](https://github.com/MarkBind/markbind/issues/903) |
 | 21 Mar 2022 | Submitted Issue: [Upgrade simple-git version #1843](https://github.com/MarkBind/markbind/issues/1843) |
-| 21 Mar 2022 | Responded to queries: [Support site versioning #1009](https://github.com/MarkBind/markbind/issues/1009) |
+| 21 Mar 2022 | Discussion on issue: [Support site versioning #1009](https://github.com/MarkBind/markbind/issues/1009) |
 | 25 Mar 2022 | Investigated Issue: [Alternative syntax for frontmatter #1850](https://github.com/MarkBind/markbind/issues/1850) |
 | 29 Mar 2022 | Investigated Issue: [Incorrect report of success when CLI commands actually fail #1863](https://github.com/MarkBind/markbind/issues/1863) |
 | 3 Apr 2022 | Submitted Issue: [Change checklist to dropdown in issue templates #1871](https://github.com/MarkBind/markbind/issues/1871) |
 | 5 Apr 2022 | Submitted Issue: [Run CI test for pull requests against all branches #1876](https://github.com/MarkBind/markbind/issues/1876) |
-| 5 Apr 2022 | Responded to queries: [Better Developer doc for merging PRs #1881](https://github.com/MarkBind/markbind/issues/1881) |
+| 5 Apr 2022 | Discussion on issue: [Better Developer doc for merging PRs #1881](https://github.com/MarkBind/markbind/issues/1881) |
 | 9 Apr 2022 | Investigated Issue: [Vue components having block-level elements in `<span>` #1850](https://github.com/MarkBind/markbind/issues/1850) |
-| 20 Apr 2022 | Responded to queries: [Integrate Markdown linter to enforce consistency #1883](https://github.com/MarkBind/markbind/issues/1883) |
+| 20 Apr 2022 | Discussion on issue: [Integrate Markdown linter to enforce consistency #1883](https://github.com/MarkBind/markbind/issues/1883) |
 
 ### Pull Requests
 
@@ -125,7 +125,7 @@ Overall, this entire process has led me to better understand and appreciate work
 | 18 Feb 2022 | Reviewed PR: [Disable fuzzy link and include autolink feature in UG #1779](https://github.com/MarkBind/markbind/pull/1779) |
 | 18 Feb 2022 | Reviewed PR: [Update outdated information in docs #1777](https://github.com/MarkBind/markbind/pull/1777) |
 | 25 Feb 2022 | Reviewed PR: [Improve documentation for deployment #1789](https://github.com/MarkBind/markbind/pull/1789) |
-| 7 Mar 2022 | Reviewed PR: [Replaced the use of deprecated <big> tag #1799 #1802](https://github.com/MarkBind/markbind/pull/1802) |
+| 7 Mar 2022 | Reviewed PR: [Replaced the use of deprecated `<big>` tag #1799 #1802](https://github.com/MarkBind/markbind/pull/1802) |
 | 7 Mar 2022 | Reviewed PR: [Remove index.md files from being searched #1805](https://github.com/MarkBind/markbind/pull/1805) |
 | 9 Mar 2022 | Reviewed PR: [Add <tree> component for folder structure visualisations #1807](https://github.com/MarkBind/markbind/pull/1807) |
 | 12 Mar 2022 | Reviewed PR: [Bump font-awesome from 5.14.0 to 5.15.4 #1822](https://github.com/MarkBind/markbind/pull/1822) |
@@ -140,6 +140,7 @@ Overall, this entire process has led me to better understand and appreciate work
 | 21 Mar 2022 | Reviewed PR: [Update GitHub Action for MarkBind #1839](https://github.com/MarkBind/markbind/pull/1839) |
 | 22 Mar 2022 | Reviewed PR: [Fix MarkBind internal package dependencies #1848](https://github.com/MarkBind/markbind/pull/1848) |
 | 24 Mar 2022 | Reviewed PR: [Bump ESLint dependencies #1852](https://github.com/MarkBind/markbind/pull/1852) |
+| 25 Mar 2022 | Reviewed PR: [Add GitHub reusable workflows for PR preview via surge #1853](https://github.com/MarkBind/markbind/pull/1853) |
 | 23 Mar 2022 | Reviewed PR: [Migrate modals from bootstrap-vue to vue-final-modal #1849](https://github.com/MarkBind/markbind/pull/1849) |
 | 28 Mar 2022 | Reviewed PR: [Update markbind-action to enhance existing features #1](https://github.com/MarkBind/markbind-action/pull/1) |
 | 31 Mar 2022 | Reviewed PR: [Add Components page to developer guide #1865](https://github.com/MarkBind/markbind/pull/1865) |
@@ -159,3 +160,12 @@ Overall, this entire process has led me to better understand and appreciate work
 | 15 Apr 2022 | Reviewed PR: [Migrate to Bootstrap 5 #1882](https://github.com/MarkBind/markbind/pull/1882) |
 | 16 Apr 2022 | Reviewed PR: [Add Annotation Feature #1858](https://github.com/MarkBind/markbind/pull/1858) |
 | 17 Apr 2022 | Reviewed PR: [Update logger to work with progress bar #1907](https://github.com/MarkBind/markbind/pull/1907) |
+| 20 Apr 2022 | Reviewed PR: [Add reusable workflows #4](https://github.com/MarkBind/markbind-action/pull/4) |
+
+### Miscellaneous
+
+| Date | Achievements |
+| ---- | ------------ |
+| 5 Jul 2021 | Published Release: [v3.0.4](https://github.com/MarkBind/markbind/releases/tag/v3.0.4) |
+| 17 Jul 2021 | Published Release: [v3.0.5](https://github.com/MarkBind/markbind/releases/tag/v3.0.5) |
+| 23 Jan 2022 | Published Release: [v3.1.1](https://github.com/MarkBind/markbind/releases/tag/v3.1.1) |
