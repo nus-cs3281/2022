@@ -75,6 +75,13 @@ Resources:
 
 - [Performance difference between DIVs, SVG and HTML Canvas](https://stackoverflow.com/questions/5882716/html5-canvas-vs-svg-vs-div#:~:text=The%20short%20answer%3A&text=SVG%20objects%20are%20DOM%20objects,yourself%2C%20or%20use%20a%20library.)
 
+#### Final choice: DIVs for annotating over images
+
+DIVs provided more flexibility since using CSS on them is simple compared to
+Canvas which is drawing over the image directly. Using components also allowed
+for the implementation of hover actions and was much simpler than the
+implementation in Canvas.
+
 ### Attributes and Query Selector
 
 The `querySelector` method is used to find elements in the DOM. I used it to get
@@ -89,6 +96,52 @@ Resources:
 
 - [query selector api](https://developer.mozilla.org/en-US/docs/Web/API/Element/querySelector)
 
-### Vue Slots
+### Debounce - JS
 
-### Image Scaling and Cropping
+In JavaScript, a debounce function makes sure that your code is only triggered
+once per user input.
+
+### Vue Element Selectors
+
+This feature of Vue was really awesome. It allowed me to get elements from the
+DOM without having to use the base javascript `querySelector` method.
+
+Element selectors are used to find elements in the DOM. I used them to get the
+image of the parent element and from there managed to calculate the width and
+height of the image.
+
+Element selectors are generally used in the `created()` section of vue but can
+be used elsewhere too.
+
+Example: `this.$el.qureySelector('.image-wrapper')`
+
+### CSS pointer redirection
+
+Learnt that in CSS if you have 2 overlaying areas, and you want to ignore the
+top area, you can use `pointer-events: none;` on the top level element and then
+use `pointer-events: all;` on the bottom level element. This makes it so that
+all pointer events in that area are redirected to the proper element.
+
+### Vue computed vs Vue method
+
+Generally not much difference between computed and methods. However the key
+differences are:
+
+Methods:
+
+- Similar to JS functions that are used to perform actions on the data.
+- Will only run when called
+- Can take in parameters
+
+Computed:
+
+- Re-rendered every time the data changes
+- Properties are available in data store
+- Automatically cached
+- Good for expensive operations
+- Cannot send parameters
+
+Resources:
+
+- [Vue computed vs Vue method](https://vuejs.org/v2/guide/computed.html#Computed-Properties)
+- [Stack overflow guide](https://stackoverflow.com/questions/44350862/methods-vs-computed-in-vue#:~:text=The%20difference%20between%20computed%20and,every%20time%20it%20is%20called.)

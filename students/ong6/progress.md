@@ -26,3 +26,10 @@
 | 10   | Authored PR: [Basic Annotation Feature #1858](https://github.com/MarkBind/markbind/pull/1858)                                                          |
 | 11   | Reviewed PR: [Improve existing GitHub issue templates #1860](https://github.com/MarkBind/markbind/pull/1860)                                           |
 | 11   | Reviewed PR: [Migrate popovers and tooltips to floating-vue #1856](https://github.com/MarkBind/markbind/pull/1856)                                     |
+| 12   | Submitted Issue: [Better Developer doc for merging PRs #1881](https://github.com/MarkBind/markbind/issues/1881)                                        |
+| 12   | Reviewed PR: [Bootstrap 5: Upgrade Bootswatch #1898](https://github.com/MarkBind/markbind/pull/1898)                                                   |
+| 12   | Reviewed PR: [Fix UG display issues when using the outputBox boilerplate #1889](https://github.com/MarkBind/markbind/pull/1889)                        |
+| 12   | Reviewed PR: [Update CI to run on all PR events #1878](https://github.com/MarkBind/markbind/pull/1878)                                                 |
+| 13   | Submitted Issue: [Annotate feature extension roadmap #1911](https://github.com/MarkBind/markbind/issues/1911)                                          |
+| 13   | Merged PR: [Basic Annotation Feature #1858](https://github.com/MarkBind/markbind/pull/1858)                                                            |
+| 13   | Reviewed PR: [Fix modal positioning in panel headers #1910](https://github.com/MarkBind/markbind/pull/1910)                                            |
