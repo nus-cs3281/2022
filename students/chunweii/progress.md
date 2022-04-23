@@ -18,9 +18,11 @@
 | 10 | Reviewed PR [#913 Remove lower priority check for duplicate issues](https://github.com/CATcher-org/CATcher/pull/913) |
 | 10 | Opened issue [#916 Suggestion: Use Github API to render markdown previews](https://github.com/CATcher-org/CATcher/issues/916) |
 | 11 | Reviewed PR [#16 UG Instructors: Add Create Session Link for Students](https://github.com/CATcher-org/catcher-org.github.io/pull/16) |
-| 11 | Opened experimental PR [#919 [Experimental]: Use Github markdown API for previews](https://github.com/CATcher-org/CATcher/pull/919) |
+| 11 | Opened PR [#919 [Experimental]: Use Github markdown API for previews](https://github.com/CATcher-org/CATcher/pull/919) |
 | 12 | Reviewed PR [#918 Upload multiple files on drag and drop](https://github.com/CATcher-org/CATcher/pull/918) |
 | 12 | Reviewed PR [#920 Integrate arcsecond parsers and remove Section](https://github.com/CATcher-org/CATcher/pull/920) |
 | 13 | Opened PR [#923 [Experimental] Enable persistent login access for CATcher](https://github.com/CATcher-org/CATcher/pull/923) |
 | 13 | Opened PR [#18 Add backend self-test knowledge](https://github.com/CATcher-org/catcher-org.github.io/pull/18) |
-| 13 | Opened PR [#929 Fix unauthorized assignee bugs](https://github.com/CATcher-org/CATcher/pull/929) |
+| 13 | Closed PR [#929 Fix unauthorized assignee bugs](https://github.com/CATcher-org/CATcher/pull/929) |
+| Reading | Opened issue [#939 Improve readability of displayed github api error message](https://github.com/CATcher-org/CATcher/issues/939) |
+| Reading | Merged PR [#933 Remove assignee check API](https://github.com/CATcher-org/CATcher/pull/933) |
