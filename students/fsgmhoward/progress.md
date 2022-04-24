@@ -46,4 +46,5 @@
 | 13     | Reviewed PR: [TEAMMATES (Rename sanitize methods) #11735](https://github.com/TEAMMATES/teammates/pull/11735)                                                         |
 | 13     | Reviewed PR: [TEAMMATES (Notification Feature - E2E Tests for User Notifications Page) #11741](https://github.com/TEAMMATES/teammates/pull/11741)                    |
 | 13     | Authored PR (merged): [TEAMMATES (Notification feature - Fix permission problem for instructors) #11739](https://github.com/TEAMMATES/teammates/pull/11739)          |
-| 13     | Authored PR (in progress): [TEAMMATES (Notification feature - User frontend tests) #11741](https://github.com/TEAMMATES/teammates/pull/11741)                        |
+| 13     | Authored PR (merged): [TEAMMATES (Notification feature - User frontend tests) #11741](https://github.com/TEAMMATES/teammates/pull/11741)                             |
+| RW     | Authored PR (merged): [TEAMMATES (Fix incorrect loading message (rework))](https://github.com/TEAMMATES/teammates/pull/11750)                                        |
