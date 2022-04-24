@@ -58,5 +58,6 @@
 | 13 | Merged PR: [Fix typos in docs #1902](https://github.com/MarkBind/markbind/pull/1902) |
 | 13 | Merged PR: [Migrate to Bootstrap 5 #1882](https://github.com/MarkBind/markbind/pull/1882) |
 | RD | Reviewed PR: [Basic Annotation Feature #1858](https://github.com/MarkBind/markbind/pull/1858) |
+| RD | Reviewed PR: [Include screenshot of dark themed code #1827](https://github.com/MarkBind/markbind/pull/1827) |
 | RD | Discussion on issues: [#1883](https://github.com/MarkBind/markbind/issues/1883), [#1909](https://github.com/MarkBind/markbind/issues/1909), [#1819](https://github.com/MarkBind/markbind/issues/1819) |
 | RD | Merged PR: [Fix modal positioning in panel headers #1910](https://github.com/MarkBind/markbind/pull/1910) |
