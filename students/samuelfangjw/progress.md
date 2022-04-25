@@ -62,3 +62,6 @@
 | 13 | Reviewed PR: [Selective Deadline Extensions - Add extension-related tooltips for students #11745](https://github.com/TEAMMATES/teammates/pull/11745) |
 | 13 | Reviewed PR: [Rename sanitize methods #11735](https://github.com/TEAMMATES/teammates/pull/11735) |
 | 13 | Reviewed PR: [Selective Deadline Extensions - Add danger modal for session end time #11704](https://github.com/TEAMMATES/teammates/pull/11704) |
+| R | Authored PR (merged): [Deadline extensions in FeedbackSession entity have unnecessary constraint #11752](https://github.com/TEAMMATES/teammates/pull/11752) |
+| R | Authored PR (merged): [Session closing email contains no information about extended deadline #11758](https://github.com/TEAMMATES/teammates/pull/11758) |
+| R | Reviewed PR: [Fix incorrect loading message (rework) #11750](https://github.com/TEAMMATES/teammates/pull/11750) |
