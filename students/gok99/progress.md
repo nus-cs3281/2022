@@ -45,4 +45,4 @@
 | 13 | Merged PR : [Delete PR deployments with >100 deployments #1732](https://github.com/reposense/RepoSense/pull/1732) |
 | 13 | Merged PR : [Modify local repository URL to the correct remote repository #1679](https://github.com/reposense/RepoSense/pull/1679) |
 | 13 | Merged PR : [Introduce file size limit to prevent large reports crashing #1647](https://github.com/reposense/RepoSense/pull/1647) |
-| Reading | Contributed to discussion in : [PR #1761](Frontend Lint: Add ts file extension to eslint #1761)  |
+| Reading | Contributed to discussion in : [PR #1761](https://github.com/reposense/RepoSense/pull/1761)  |
